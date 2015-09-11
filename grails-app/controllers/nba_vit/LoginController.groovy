@@ -11,7 +11,7 @@ class LoginController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        println("index")
+        println("index method called")
         params.max = Math.min(max ?: 10, 100)
         //println(params)
         respond Login.list(params), model:[loginInstanceCount: Login.count()]
