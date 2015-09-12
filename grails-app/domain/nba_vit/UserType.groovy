@@ -1,12 +1,12 @@
 package nba_vit
 
 class UserType {
-    String usertype
+    String name
    
     String toString ()  {
-        usertype    
+        name    
     }
     static constraints = {
-        usertype nullable: false
+        name nullable: false
     }
 }
