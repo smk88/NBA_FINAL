@@ -2,20 +2,36 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'course_code', 'error')} ">
-	<label for="course_code">
-		<g:message code="course.course_code.label" default="Coursecode" />
+<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'courseCode', 'error')} ">
+	<label for="courseCode">
+		<g:message code="course.courseCode.label" default="Course Code" />
 		
 	</label>
-	<g:textField name="course_code" value="${courseInstance?.course_code}"/>
+	<g:textField name="courseCode" value="${courseInstance?.courseCode}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'course_name', 'error')} ">
-	<label for="course_name">
-		<g:message code="course.course_name.label" default="Coursename" />
+<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'courseCredit', 'error')} required">
+	<label for="courseCredit">
+		<g:message code="course.courseCredit.label" default="Course Credit" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="courseCredit" type="number" value="${courseInstance.courseCredit}" required=""/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'courseName', 'error')} ">
+	<label for="courseName">
+		<g:message code="course.courseName.label" default="Course Name" />
 		
 	</label>
-	<g:textField name="course_name" value="${courseInstance?.course_name}"/>
+	<g:textField name="courseName" value="${courseInstance?.courseName}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'courseType', 'error')} required">
+	<label for="courseType">
+		<g:message code="course.courseType.label" default="Course Type" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="courseType" name="courseType.id" from="${nba_vit.CourseType.list()}" optionKey="id" required="" value="${courseInstance?.courseType?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'coursetype', 'error')} required">
@@ -24,14 +40,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="coursetype" name="coursetype.id" from="${nba_vit.CourseType.list()}" optionKey="id" required="" value="${courseInstance?.coursetype?.id}" class="many-to-one"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'credit', 'error')} required">
-	<label for="credit">
-		<g:message code="course.credit.label" default="Credit" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="credit" type="number" value="${courseInstance.credit}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'employee', 'error')} required">

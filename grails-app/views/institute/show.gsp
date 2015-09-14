@@ -41,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${instituteInstance?.est_date}">
+				<g:if test="${instituteInstance?.establishmentDate}">
 				<li class="fieldcontain">
-					<span id="est_date-label" class="property-label"><g:message code="institute.est_date.label" default="Estdate" /></span>
+					<span id="establishmentDate-label" class="property-label"><g:message code="institute.establishmentDate.label" default="Establishment Date" /></span>
 					
-						<span class="property-value" aria-labelledby="est_date-label"><g:formatDate date="${instituteInstance?.est_date}" /></span>
+						<span class="property-value" aria-labelledby="establishmentDate-label"><g:formatDate date="${instituteInstance?.establishmentDate}" /></span>
 					
 				</li>
 				</g:if>
@@ -68,11 +68,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${instituteInstance?.vm_crtd_date}">
+				<g:if test="${instituteInstance?.vmCreatedDate}">
 				<li class="fieldcontain">
-					<span id="vm_crtd_date-label" class="property-label"><g:message code="institute.vm_crtd_date.label" default="Vmcrtddate" /></span>
+					<span id="vmCreatedDate-label" class="property-label"><g:message code="institute.vmCreatedDate.label" default="Vm Created Date" /></span>
 					
-						<span class="property-value" aria-labelledby="vm_crtd_date-label"><g:formatDate date="${instituteInstance?.vm_crtd_date}" /></span>
+						<span class="property-value" aria-labelledby="vmCreatedDate-label"><g:formatDate date="${instituteInstance?.vmCreatedDate}" /></span>
 					
 				</li>
 				</g:if>

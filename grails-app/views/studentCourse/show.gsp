@@ -41,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${studentCourseInstance?.student_division}">
+				<g:if test="${studentCourseInstance?.studentDivision}">
 				<li class="fieldcontain">
-					<span id="student_division-label" class="property-label"><g:message code="studentCourse.student_division.label" default="Studentdivision" /></span>
+					<span id="studentDivision-label" class="property-label"><g:message code="studentCourse.studentDivision.label" default="Student Division" /></span>
 					
-						<span class="property-value" aria-labelledby="student_division-label"><g:fieldValue bean="${studentCourseInstance}" field="student_division"/></span>
+						<span class="property-value" aria-labelledby="studentDivision-label"><g:fieldValue bean="${studentCourseInstance}" field="studentDivision"/></span>
 					
 				</li>
 				</g:if>

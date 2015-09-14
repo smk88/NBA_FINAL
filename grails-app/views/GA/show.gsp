@@ -23,11 +23,20 @@
 			</g:if>
 			<ol class="property-list GA">
 			
-				<g:if test="${GAInstance?.ga_statement}">
+				<g:if test="${GAInstance?.gaStatement}">
 				<li class="fieldcontain">
-					<span id="ga_statement-label" class="property-label"><g:message code="GA.ga_statement.label" default="Gastatement" /></span>
+					<span id="gaStatement-label" class="property-label"><g:message code="GA.gaStatement.label" default="Ga Statement" /></span>
 					
-						<span class="property-value" aria-labelledby="ga_statement-label"><g:fieldValue bean="${GAInstance}" field="ga_statement"/></span>
+						<span class="property-value" aria-labelledby="gaStatement-label"><g:fieldValue bean="${GAInstance}" field="gaStatement"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${GAInstance?.gaCode}">
+				<li class="fieldcontain">
+					<span id="gaCode-label" class="property-label"><g:message code="GA.gaCode.label" default="Ga Code" /></span>
+					
+						<span class="property-value" aria-labelledby="gaCode-label"><g:fieldValue bean="${GAInstance}" field="gaCode"/></span>
 					
 				</li>
 				</g:if>

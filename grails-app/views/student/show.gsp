@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list student">
 			
-				<g:if test="${studentInstance?.grno}">
+				<g:if test="${studentInstance?.grNumber}">
 				<li class="fieldcontain">
-					<span id="grno-label" class="property-label"><g:message code="student.grno.label" default="Grno" /></span>
+					<span id="grNumber-label" class="property-label"><g:message code="student.grNumber.label" default="Gr Number" /></span>
 					
-						<span class="property-value" aria-labelledby="grno-label"><g:fieldValue bean="${studentInstance}" field="grno"/></span>
+						<span class="property-value" aria-labelledby="grNumber-label"><g:fieldValue bean="${studentInstance}" field="grNumber"/></span>
 					
 				</li>
 				</g:if>
@@ -50,110 +50,110 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.mob}">
+				<g:if test="${studentInstance?.mobileNumber}">
 				<li class="fieldcontain">
-					<span id="mob-label" class="property-label"><g:message code="student.mob.label" default="Mob" /></span>
+					<span id="mobileNumber-label" class="property-label"><g:message code="student.mobileNumber.label" default="Mobile Number" /></span>
 					
-						<span class="property-value" aria-labelledby="mob-label"><g:fieldValue bean="${studentInstance}" field="mob"/></span>
+						<span class="property-value" aria-labelledby="mobileNumber-label"><g:fieldValue bean="${studentInstance}" field="mobileNumber"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.curr_yr}">
+				<g:if test="${studentInstance?.currentYear}">
 				<li class="fieldcontain">
-					<span id="curr_yr-label" class="property-label"><g:message code="student.curr_yr.label" default="Curryr" /></span>
+					<span id="currentYear-label" class="property-label"><g:message code="student.currentYear.label" default="Current Year" /></span>
 					
-						<span class="property-value" aria-labelledby="curr_yr-label"><g:fieldValue bean="${studentInstance}" field="curr_yr"/></span>
+						<span class="property-value" aria-labelledby="currentYear-label"><g:fieldValue bean="${studentInstance}" field="currentYear"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.academic_yr}">
+				<g:if test="${studentInstance?.academicYear}">
 				<li class="fieldcontain">
-					<span id="academic_yr-label" class="property-label"><g:message code="student.academic_yr.label" default="Academicyr" /></span>
+					<span id="academicYear-label" class="property-label"><g:message code="student.academicYear.label" default="Academic Year" /></span>
 					
-						<span class="property-value" aria-labelledby="academic_yr-label"><g:fieldValue bean="${studentInstance}" field="academic_yr"/></span>
+						<span class="property-value" aria-labelledby="academicYear-label"><g:fieldValue bean="${studentInstance}" field="academicYear"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.fy_rn}">
+				<g:if test="${studentInstance?.fyRollNo}">
 				<li class="fieldcontain">
-					<span id="fy_rn-label" class="property-label"><g:message code="student.fy_rn.label" default="Fyrn" /></span>
+					<span id="fyRollNo-label" class="property-label"><g:message code="student.fyRollNo.label" default="Fy Roll No" /></span>
 					
-						<span class="property-value" aria-labelledby="fy_rn-label"><g:fieldValue bean="${studentInstance}" field="fy_rn"/></span>
+						<span class="property-value" aria-labelledby="fyRollNo-label"><g:fieldValue bean="${studentInstance}" field="fyRollNo"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.sy_rn}">
+				<g:if test="${studentInstance?.syRollNo}">
 				<li class="fieldcontain">
-					<span id="sy_rn-label" class="property-label"><g:message code="student.sy_rn.label" default="Syrn" /></span>
+					<span id="syRollNo-label" class="property-label"><g:message code="student.syRollNo.label" default="Sy Roll No" /></span>
 					
-						<span class="property-value" aria-labelledby="sy_rn-label"><g:fieldValue bean="${studentInstance}" field="sy_rn"/></span>
+						<span class="property-value" aria-labelledby="syRollNo-label"><g:fieldValue bean="${studentInstance}" field="syRollNo"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.ty_rn}">
+				<g:if test="${studentInstance?.tyRollNo}">
 				<li class="fieldcontain">
-					<span id="ty_rn-label" class="property-label"><g:message code="student.ty_rn.label" default="Tyrn" /></span>
+					<span id="tyRollNo-label" class="property-label"><g:message code="student.tyRollNo.label" default="Ty Roll No" /></span>
 					
-						<span class="property-value" aria-labelledby="ty_rn-label"><g:fieldValue bean="${studentInstance}" field="ty_rn"/></span>
+						<span class="property-value" aria-labelledby="tyRollNo-label"><g:fieldValue bean="${studentInstance}" field="tyRollNo"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.btech_rn}">
+				<g:if test="${studentInstance?.btechRollNo}">
 				<li class="fieldcontain">
-					<span id="btech_rn-label" class="property-label"><g:message code="student.btech_rn.label" default="Btechrn" /></span>
+					<span id="btechRollNo-label" class="property-label"><g:message code="student.btechRollNo.label" default="Btech Roll No" /></span>
 					
-						<span class="property-value" aria-labelledby="btech_rn-label"><g:fieldValue bean="${studentInstance}" field="btech_rn"/></span>
+						<span class="property-value" aria-labelledby="btechRollNo-label"><g:fieldValue bean="${studentInstance}" field="btechRollNo"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.fy_div}">
+				<g:if test="${studentInstance?.fyDivision}">
 				<li class="fieldcontain">
-					<span id="fy_div-label" class="property-label"><g:message code="student.fy_div.label" default="Fydiv" /></span>
+					<span id="fyDivision-label" class="property-label"><g:message code="student.fyDivision.label" default="Fy Division" /></span>
 					
-						<span class="property-value" aria-labelledby="fy_div-label"><g:fieldValue bean="${studentInstance}" field="fy_div"/></span>
+						<span class="property-value" aria-labelledby="fyDivision-label"><g:fieldValue bean="${studentInstance}" field="fyDivision"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.sy_div}">
+				<g:if test="${studentInstance?.syDivision}">
 				<li class="fieldcontain">
-					<span id="sy_div-label" class="property-label"><g:message code="student.sy_div.label" default="Sydiv" /></span>
+					<span id="syDivision-label" class="property-label"><g:message code="student.syDivision.label" default="Sy Division" /></span>
 					
-						<span class="property-value" aria-labelledby="sy_div-label"><g:fieldValue bean="${studentInstance}" field="sy_div"/></span>
+						<span class="property-value" aria-labelledby="syDivision-label"><g:fieldValue bean="${studentInstance}" field="syDivision"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.ty_div}">
+				<g:if test="${studentInstance?.tyDivision}">
 				<li class="fieldcontain">
-					<span id="ty_div-label" class="property-label"><g:message code="student.ty_div.label" default="Tydiv" /></span>
+					<span id="tyDivision-label" class="property-label"><g:message code="student.tyDivision.label" default="Ty Division" /></span>
 					
-						<span class="property-value" aria-labelledby="ty_div-label"><g:fieldValue bean="${studentInstance}" field="ty_div"/></span>
+						<span class="property-value" aria-labelledby="tyDivision-label"><g:fieldValue bean="${studentInstance}" field="tyDivision"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.btech_div}">
+				<g:if test="${studentInstance?.btechDivision}">
 				<li class="fieldcontain">
-					<span id="btech_div-label" class="property-label"><g:message code="student.btech_div.label" default="Btechdiv" /></span>
+					<span id="btechDivision-label" class="property-label"><g:message code="student.btechDivision.label" default="Btech Division" /></span>
 					
-						<span class="property-value" aria-labelledby="btech_div-label"><g:fieldValue bean="${studentInstance}" field="btech_div"/></span>
+						<span class="property-value" aria-labelledby="btechDivision-label"><g:fieldValue bean="${studentInstance}" field="btechDivision"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.grad_status}">
+				<g:if test="${studentInstance?.graduationStatus}">
 				<li class="fieldcontain">
-					<span id="grad_status-label" class="property-label"><g:message code="student.grad_status.label" default="Gradstatus" /></span>
+					<span id="graduationStatus-label" class="property-label"><g:message code="student.graduationStatus.label" default="Graduation Status" /></span>
 					
-						<span class="property-value" aria-labelledby="grad_status-label"><g:formatBoolean boolean="${studentInstance?.grad_status}" /></span>
+						<span class="property-value" aria-labelledby="graduationStatus-label"><g:formatBoolean boolean="${studentInstance?.graduationStatus}" /></span>
 					
 				</li>
 				</g:if>

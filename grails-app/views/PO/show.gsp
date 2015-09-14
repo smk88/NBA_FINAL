@@ -23,11 +23,20 @@
 			</g:if>
 			<ol class="property-list PO">
 			
-				<g:if test="${POInstance?.po_statement}">
+				<g:if test="${POInstance?.poStatement}">
 				<li class="fieldcontain">
-					<span id="po_statement-label" class="property-label"><g:message code="PO.po_statement.label" default="Postatement" /></span>
+					<span id="poStatement-label" class="property-label"><g:message code="PO.poStatement.label" default="Po Statement" /></span>
 					
-						<span class="property-value" aria-labelledby="po_statement-label"><g:fieldValue bean="${POInstance}" field="po_statement"/></span>
+						<span class="property-value" aria-labelledby="poStatement-label"><g:fieldValue bean="${POInstance}" field="poStatement"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${POInstance?.poCode}">
+				<li class="fieldcontain">
+					<span id="poCode-label" class="property-label"><g:message code="PO.poCode.label" default="Po Code" /></span>
+					
+						<span class="property-value" aria-labelledby="poCode-label"><g:fieldValue bean="${POInstance}" field="poCode"/></span>
 					
 				</li>
 				</g:if>

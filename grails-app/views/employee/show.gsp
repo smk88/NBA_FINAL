@@ -32,20 +32,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${employeeInstance?.eid}">
+				<g:if test="${employeeInstance?.employeeId}">
 				<li class="fieldcontain">
-					<span id="eid-label" class="property-label"><g:message code="employee.eid.label" default="Eid" /></span>
+					<span id="employeeId-label" class="property-label"><g:message code="employee.employeeId.label" default="Employee Id" /></span>
 					
-						<span class="property-value" aria-labelledby="eid-label"><g:fieldValue bean="${employeeInstance}" field="eid"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${employeeInstance?.email}">
-				<li class="fieldcontain">
-					<span id="email-label" class="property-label"><g:message code="employee.email.label" default="Email" /></span>
-					
-						<span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${employeeInstance}" field="email"/></span>
+						<span class="property-value" aria-labelledby="employeeId-label"><g:fieldValue bean="${employeeInstance}" field="employeeId"/></span>
 					
 				</li>
 				</g:if>
@@ -55,6 +46,15 @@
 					<span id="department-label" class="property-label"><g:message code="employee.department.label" default="Department" /></span>
 					
 						<span class="property-value" aria-labelledby="department-label"><g:link controller="department" action="show" id="${employeeInstance?.department?.id}">${employeeInstance?.department?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${employeeInstance?.email}">
+				<li class="fieldcontain">
+					<span id="email-label" class="property-label"><g:message code="employee.email.label" default="Email" /></span>
+					
+						<span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${employeeInstance}" field="email"/></span>
 					
 				</li>
 				</g:if>

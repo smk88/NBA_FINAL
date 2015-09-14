@@ -2,11 +2,19 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: GAInstance, field: 'ga_statement', 'error')} ">
-	<label for="ga_statement">
-		<g:message code="GA.ga_statement.label" default="Gastatement" />
+<div class="fieldcontain ${hasErrors(bean: GAInstance, field: 'gaStatement', 'error')} ">
+	<label for="gaStatement">
+		<g:message code="GA.gaStatement.label" default="Ga Statement" />
 		
 	</label>
-	<g:textField name="ga_statement" value="${GAInstance?.ga_statement}"/>
+	<g:textField name="gaStatement" value="${GAInstance?.gaStatement}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: GAInstance, field: 'gaCode', 'error')} ">
+	<label for="gaCode">
+		<g:message code="GA.gaCode.label" default="Ga Code" />
+		
+	</label>
+	<g:textField name="gaCode" value="${GAInstance?.gaCode}"/>
 </div>
 

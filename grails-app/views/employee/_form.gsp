@@ -10,20 +10,12 @@
 	<g:textField name="name" value="${employeeInstance?.name}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: employeeInstance, field: 'eid', 'error')} ">
-	<label for="eid">
-		<g:message code="employee.eid.label" default="Eid" />
+<div class="fieldcontain ${hasErrors(bean: employeeInstance, field: 'employeeId', 'error')} ">
+	<label for="employeeId">
+		<g:message code="employee.employeeId.label" default="Employee Id" />
 		
 	</label>
-	<g:textField name="eid" value="${employeeInstance?.eid}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: employeeInstance, field: 'email', 'error')} ">
-	<label for="email">
-		<g:message code="employee.email.label" default="Email" />
-		
-	</label>
-	<g:field type="email" name="email" value="${employeeInstance?.email}"/>
+	<g:textField name="employeeId" value="${employeeInstance?.employeeId}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: employeeInstance, field: 'department', 'error')} required">
@@ -32,6 +24,14 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="department" name="department.id" from="${nba_vit.Department.list()}" optionKey="id" required="" value="${employeeInstance?.department?.id}" class="many-to-one"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: employeeInstance, field: 'email', 'error')} ">
+	<label for="email">
+		<g:message code="employee.email.label" default="Email" />
+		
+	</label>
+	<g:textField name="email" value="${employeeInstance?.email}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: employeeInstance, field: 'mob', 'error')} ">

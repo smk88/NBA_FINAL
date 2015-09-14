@@ -26,6 +26,8 @@
 					
 						<g:sortableColumn property="acadamicYear" title="${message(code: 'courseOutcome.acadamicYear.label', default: 'Acadamic Year')}" />
 					
+						<g:sortableColumn property="coCode" title="${message(code: 'courseOutcome.coCode.label', default: 'Co Code')}" />
+					
 						<g:sortableColumn property="coStatement" title="${message(code: 'courseOutcome.coStatement.label', default: 'Co Statement')}" />
 					
 						<th><g:message code="courseOutcome.course.label" default="Course" /></th>
@@ -39,6 +41,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${courseOutcomeInstance.id}">${fieldValue(bean: courseOutcomeInstance, field: "acadamicYear")}</g:link></td>
+					
+						<td>${fieldValue(bean: courseOutcomeInstance, field: "coCode")}</td>
 					
 						<td>${fieldValue(bean: courseOutcomeInstance, field: "coStatement")}</td>
 					

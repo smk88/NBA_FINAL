@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list courseOffering">
 			
-				<g:if test="${courseOfferingInstance?.acadamic_year}">
+				<g:if test="${courseOfferingInstance?.acadamicYear}">
 				<li class="fieldcontain">
-					<span id="acadamic_year-label" class="property-label"><g:message code="courseOffering.acadamic_year.label" default="Acadamicyear" /></span>
+					<span id="acadamicYear-label" class="property-label"><g:message code="courseOffering.acadamicYear.label" default="Acadamic Year" /></span>
 					
-						<span class="property-value" aria-labelledby="acadamic_year-label"><g:fieldValue bean="${courseOfferingInstance}" field="acadamic_year"/></span>
+						<span class="property-value" aria-labelledby="acadamicYear-label"><g:fieldValue bean="${courseOfferingInstance}" field="acadamicYear"/></span>
 					
 				</li>
 				</g:if>

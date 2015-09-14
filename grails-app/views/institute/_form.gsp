@@ -18,12 +18,12 @@
 	<g:textField name="address" value="${instituteInstance?.address}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: instituteInstance, field: 'est_date', 'error')} required">
-	<label for="est_date">
-		<g:message code="institute.est_date.label" default="Estdate" />
+<div class="fieldcontain ${hasErrors(bean: instituteInstance, field: 'establishmentDate', 'error')} required">
+	<label for="establishmentDate">
+		<g:message code="institute.establishmentDate.label" default="Establishment Date" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="est_date" precision="day"  value="${instituteInstance?.est_date}"  />
+	<g:datePicker name="establishmentDate" precision="day"  value="${instituteInstance?.establishmentDate}"  />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: instituteInstance, field: 'vision', 'error')} ">
@@ -42,11 +42,11 @@
 	<g:textField name="mission" value="${instituteInstance?.mission}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: instituteInstance, field: 'vm_crtd_date', 'error')} required">
-	<label for="vm_crtd_date">
-		<g:message code="institute.vm_crtd_date.label" default="Vmcrtddate" />
+<div class="fieldcontain ${hasErrors(bean: instituteInstance, field: 'vmCreatedDate', 'error')} required">
+	<label for="vmCreatedDate">
+		<g:message code="institute.vmCreatedDate.label" default="Vm Created Date" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="vm_crtd_date" precision="day"  value="${instituteInstance?.vm_crtd_date}"  />
+	<g:datePicker name="vmCreatedDate" precision="day"  value="${instituteInstance?.vmCreatedDate}"  />
 </div>
 

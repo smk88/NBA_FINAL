@@ -26,11 +26,11 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'employee.name.label', default: 'Name')}" />
 					
-						<g:sortableColumn property="eid" title="${message(code: 'employee.eid.label', default: 'Eid')}" />
-					
-						<g:sortableColumn property="email" title="${message(code: 'employee.email.label', default: 'Email')}" />
+						<g:sortableColumn property="employeeId" title="${message(code: 'employee.employeeId.label', default: 'Employee Id')}" />
 					
 						<th><g:message code="employee.department.label" default="Department" /></th>
+					
+						<g:sortableColumn property="email" title="${message(code: 'employee.email.label', default: 'Email')}" />
 					
 						<g:sortableColumn property="mob" title="${message(code: 'employee.mob.label', default: 'Mob')}" />
 					
@@ -44,11 +44,11 @@
 					
 						<td><g:link action="show" id="${employeeInstance.id}">${fieldValue(bean: employeeInstance, field: "name")}</g:link></td>
 					
-						<td>${fieldValue(bean: employeeInstance, field: "eid")}</td>
-					
-						<td>${fieldValue(bean: employeeInstance, field: "email")}</td>
+						<td>${fieldValue(bean: employeeInstance, field: "employeeId")}</td>
 					
 						<td>${fieldValue(bean: employeeInstance, field: "department")}</td>
+					
+						<td>${fieldValue(bean: employeeInstance, field: "email")}</td>
 					
 						<td>${fieldValue(bean: employeeInstance, field: "mob")}</td>
 					

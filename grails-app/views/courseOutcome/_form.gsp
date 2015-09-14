@@ -10,6 +10,14 @@
 	<g:textField name="acadamicYear" value="${courseOutcomeInstance?.acadamicYear}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: courseOutcomeInstance, field: 'coCode', 'error')} ">
+	<label for="coCode">
+		<g:message code="courseOutcome.coCode.label" default="Co Code" />
+		
+	</label>
+	<g:textField name="coCode" value="${courseOutcomeInstance?.coCode}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: courseOutcomeInstance, field: 'coStatement', 'error')} ">
 	<label for="coStatement">
 		<g:message code="courseOutcome.coStatement.label" default="Co Statement" />

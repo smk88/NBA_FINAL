@@ -23,11 +23,20 @@
 			</g:if>
 			<ol class="property-list PEO">
 			
-				<g:if test="${PEOInstance?.peo_statement}">
+				<g:if test="${PEOInstance?.peoStatement}">
 				<li class="fieldcontain">
-					<span id="peo_statement-label" class="property-label"><g:message code="PEO.peo_statement.label" default="Peostatement" /></span>
+					<span id="peoStatement-label" class="property-label"><g:message code="PEO.peoStatement.label" default="Peo Statement" /></span>
 					
-						<span class="property-value" aria-labelledby="peo_statement-label"><g:fieldValue bean="${PEOInstance}" field="peo_statement"/></span>
+						<span class="property-value" aria-labelledby="peoStatement-label"><g:fieldValue bean="${PEOInstance}" field="peoStatement"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${PEOInstance?.peoCode}">
+				<li class="fieldcontain">
+					<span id="peoCode-label" class="property-label"><g:message code="PEO.peoCode.label" default="Peo Code" /></span>
+					
+						<span class="property-value" aria-labelledby="peoCode-label"><g:fieldValue bean="${PEOInstance}" field="peoCode"/></span>
 					
 				</li>
 				</g:if>

@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${courseOutcomeInstance?.coCode}">
+				<li class="fieldcontain">
+					<span id="coCode-label" class="property-label"><g:message code="courseOutcome.coCode.label" default="Co Code" /></span>
+					
+						<span class="property-value" aria-labelledby="coCode-label"><g:fieldValue bean="${courseOutcomeInstance}" field="coCode"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${courseOutcomeInstance?.coStatement}">
 				<li class="fieldcontain">
 					<span id="coStatement-label" class="property-label"><g:message code="courseOutcome.coStatement.label" default="Co Statement" /></span>

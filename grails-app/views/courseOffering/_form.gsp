@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: courseOfferingInstance, field: 'acadamic_year', 'error')} ">
-	<label for="acadamic_year">
-		<g:message code="courseOffering.acadamic_year.label" default="Acadamicyear" />
+<div class="fieldcontain ${hasErrors(bean: courseOfferingInstance, field: 'acadamicYear', 'error')} ">
+	<label for="acadamicYear">
+		<g:message code="courseOffering.acadamicYear.label" default="Acadamic Year" />
 		
 	</label>
-	<g:textField name="acadamic_year" value="${courseOfferingInstance?.acadamic_year}"/>
+	<g:textField name="acadamicYear" value="${courseOfferingInstance?.acadamicYear}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: courseOfferingInstance, field: 'course', 'error')} required">

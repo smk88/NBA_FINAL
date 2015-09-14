@@ -2,7 +2,7 @@ package nba_vit
 
 class CourseOffering {
     Course course
-    String acadamic_year
+    String acadamicYear
     String semester
     String module
     String year

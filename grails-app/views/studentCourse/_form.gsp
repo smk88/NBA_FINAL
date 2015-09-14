@@ -18,11 +18,11 @@
 	<g:select id="student" name="student.id" from="${nba_vit.Student.list()}" optionKey="id" required="" value="${studentCourseInstance?.student?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentCourseInstance, field: 'student_division', 'error')} ">
-	<label for="student_division">
-		<g:message code="studentCourse.student_division.label" default="Studentdivision" />
+<div class="fieldcontain ${hasErrors(bean: studentCourseInstance, field: 'studentDivision', 'error')} ">
+	<label for="studentDivision">
+		<g:message code="studentCourse.studentDivision.label" default="Student Division" />
 		
 	</label>
-	<g:textField name="student_division" value="${studentCourseInstance?.student_division}"/>
+	<g:textField name="studentDivision" value="${studentCourseInstance?.studentDivision}"/>
 </div>
 

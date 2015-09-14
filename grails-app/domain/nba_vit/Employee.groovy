@@ -2,7 +2,7 @@ package nba_vit
 
 class Employee {
     String name
-    String eid
+    String employeeId
     Role role
     String email
     String mob
@@ -11,10 +11,14 @@ class Employee {
     static belongsTo=[department:Department,program:Program,role:Role]
     static hasMany=[role:Role]
     
+     String toString ()  {
+        employeeId
+    }
+    
     static constraints = {
         name nullable:false
-        eid nullable:false
-        email email : true
+        employeeId nullable:false
+        //email email : true
         
     }
 }

@@ -24,7 +24,9 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="ga_statement" title="${message(code: 'GA.ga_statement.label', default: 'Gastatement')}" />
+						<g:sortableColumn property="gaStatement" title="${message(code: 'GA.gaStatement.label', default: 'Ga Statement')}" />
+					
+						<g:sortableColumn property="gaCode" title="${message(code: 'GA.gaCode.label', default: 'Ga Code')}" />
 					
 					</tr>
 				</thead>
@@ -32,7 +34,9 @@
 				<g:each in="${GAInstanceList}" status="i" var="GAInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${GAInstance.id}">${fieldValue(bean: GAInstance, field: "ga_statement")}</g:link></td>
+						<td><g:link action="show" id="${GAInstance.id}">${fieldValue(bean: GAInstance, field: "gaStatement")}</g:link></td>
+					
+						<td>${fieldValue(bean: GAInstance, field: "gaCode")}</td>
 					
 					</tr>
 				</g:each>

@@ -24,7 +24,9 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="peo_statement" title="${message(code: 'PEO.peo_statement.label', default: 'Peostatement')}" />
+						<g:sortableColumn property="peoStatement" title="${message(code: 'PEO.peoStatement.label', default: 'Peo Statement')}" />
+					
+						<g:sortableColumn property="peoCode" title="${message(code: 'PEO.peoCode.label', default: 'Peo Code')}" />
 					
 					</tr>
 				</thead>
@@ -32,7 +34,9 @@
 				<g:each in="${PEOInstanceList}" status="i" var="PEOInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${PEOInstance.id}">${fieldValue(bean: PEOInstance, field: "peo_statement")}</g:link></td>
+						<td><g:link action="show" id="${PEOInstance.id}">${fieldValue(bean: PEOInstance, field: "peoStatement")}</g:link></td>
+					
+						<td>${fieldValue(bean: PEOInstance, field: "peoCode")}</td>
 					
 					</tr>
 				</g:each>

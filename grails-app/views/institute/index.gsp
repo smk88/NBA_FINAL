@@ -28,13 +28,13 @@
 					
 						<g:sortableColumn property="address" title="${message(code: 'institute.address.label', default: 'Address')}" />
 					
-						<g:sortableColumn property="est_date" title="${message(code: 'institute.est_date.label', default: 'Estdate')}" />
+						<g:sortableColumn property="establishmentDate" title="${message(code: 'institute.establishmentDate.label', default: 'Establishment Date')}" />
 					
 						<g:sortableColumn property="vision" title="${message(code: 'institute.vision.label', default: 'Vision')}" />
 					
 						<g:sortableColumn property="mission" title="${message(code: 'institute.mission.label', default: 'Mission')}" />
 					
-						<g:sortableColumn property="vm_crtd_date" title="${message(code: 'institute.vm_crtd_date.label', default: 'Vmcrtddate')}" />
+						<g:sortableColumn property="vmCreatedDate" title="${message(code: 'institute.vmCreatedDate.label', default: 'Vm Created Date')}" />
 					
 					</tr>
 				</thead>
@@ -46,13 +46,13 @@
 					
 						<td>${fieldValue(bean: instituteInstance, field: "address")}</td>
 					
-						<td><g:formatDate date="${instituteInstance.est_date}" /></td>
+						<td><g:formatDate date="${instituteInstance.establishmentDate}" /></td>
 					
 						<td>${fieldValue(bean: instituteInstance, field: "vision")}</td>
 					
 						<td>${fieldValue(bean: instituteInstance, field: "mission")}</td>
 					
-						<td><g:formatDate date="${instituteInstance.vm_crtd_date}" /></td>
+						<td><g:formatDate date="${instituteInstance.vmCreatedDate}" /></td>
 					
 					</tr>
 				</g:each>

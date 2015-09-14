@@ -24,17 +24,17 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="grno" title="${message(code: 'student.grno.label', default: 'Grno')}" />
+						<g:sortableColumn property="grNumber" title="${message(code: 'student.grNumber.label', default: 'Gr Number')}" />
 					
 						<g:sortableColumn property="name" title="${message(code: 'student.name.label', default: 'Name')}" />
 					
 						<g:sortableColumn property="email" title="${message(code: 'student.email.label', default: 'Email')}" />
 					
-						<g:sortableColumn property="mob" title="${message(code: 'student.mob.label', default: 'Mob')}" />
+						<g:sortableColumn property="mobileNumber" title="${message(code: 'student.mobileNumber.label', default: 'Mobile Number')}" />
 					
-						<g:sortableColumn property="curr_yr" title="${message(code: 'student.curr_yr.label', default: 'Curryr')}" />
+						<g:sortableColumn property="currentYear" title="${message(code: 'student.currentYear.label', default: 'Current Year')}" />
 					
-						<g:sortableColumn property="academic_yr" title="${message(code: 'student.academic_yr.label', default: 'Academicyr')}" />
+						<g:sortableColumn property="academicYear" title="${message(code: 'student.academicYear.label', default: 'Academic Year')}" />
 					
 					</tr>
 				</thead>
@@ -42,17 +42,17 @@
 				<g:each in="${studentInstanceList}" status="i" var="studentInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${studentInstance.id}">${fieldValue(bean: studentInstance, field: "grno")}</g:link></td>
+						<td><g:link action="show" id="${studentInstance.id}">${fieldValue(bean: studentInstance, field: "grNumber")}</g:link></td>
 					
 						<td>${fieldValue(bean: studentInstance, field: "name")}</td>
 					
 						<td>${fieldValue(bean: studentInstance, field: "email")}</td>
 					
-						<td>${fieldValue(bean: studentInstance, field: "mob")}</td>
+						<td>${fieldValue(bean: studentInstance, field: "mobileNumber")}</td>
 					
-						<td>${fieldValue(bean: studentInstance, field: "curr_yr")}</td>
+						<td>${fieldValue(bean: studentInstance, field: "currentYear")}</td>
 					
-						<td>${fieldValue(bean: studentInstance, field: "academic_yr")}</td>
+						<td>${fieldValue(bean: studentInstance, field: "academicYear")}</td>
 					
 					</tr>
 				</g:each>

@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'grno', 'error')} ">
-	<label for="grno">
-		<g:message code="student.grno.label" default="Grno" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'grNumber', 'error')} ">
+	<label for="grNumber">
+		<g:message code="student.grNumber.label" default="Gr Number" />
 		
 	</label>
-	<g:textField name="grno" value="${studentInstance?.grno}"/>
+	<g:textField name="grNumber" value="${studentInstance?.grNumber}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'name', 'error')} ">
@@ -26,100 +26,100 @@
 	<g:field type="email" name="email" value="${studentInstance?.email}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'mob', 'error')} ">
-	<label for="mob">
-		<g:message code="student.mob.label" default="Mob" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'mobileNumber', 'error')} ">
+	<label for="mobileNumber">
+		<g:message code="student.mobileNumber.label" default="Mobile Number" />
 		
 	</label>
-	<g:textField name="mob" value="${studentInstance?.mob}"/>
+	<g:textField name="mobileNumber" value="${studentInstance?.mobileNumber}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'curr_yr', 'error')} ">
-	<label for="curr_yr">
-		<g:message code="student.curr_yr.label" default="Curryr" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'currentYear', 'error')} ">
+	<label for="currentYear">
+		<g:message code="student.currentYear.label" default="Current Year" />
 		
 	</label>
-	<g:textField name="curr_yr" value="${studentInstance?.curr_yr}"/>
+	<g:textField name="currentYear" value="${studentInstance?.currentYear}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'academic_yr', 'error')} ">
-	<label for="academic_yr">
-		<g:message code="student.academic_yr.label" default="Academicyr" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'academicYear', 'error')} ">
+	<label for="academicYear">
+		<g:message code="student.academicYear.label" default="Academic Year" />
 		
 	</label>
-	<g:textField name="academic_yr" value="${studentInstance?.academic_yr}"/>
+	<g:textField name="academicYear" value="${studentInstance?.academicYear}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'fy_rn', 'error')} required">
-	<label for="fy_rn">
-		<g:message code="student.fy_rn.label" default="Fyrn" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'fyRollNo', 'error')} required">
+	<label for="fyRollNo">
+		<g:message code="student.fyRollNo.label" default="Fy Roll No" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="fy_rn" type="number" value="${studentInstance.fy_rn}" required=""/>
+	<g:field name="fyRollNo" type="number" value="${studentInstance.fyRollNo}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'sy_rn', 'error')} required">
-	<label for="sy_rn">
-		<g:message code="student.sy_rn.label" default="Syrn" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'syRollNo', 'error')} required">
+	<label for="syRollNo">
+		<g:message code="student.syRollNo.label" default="Sy Roll No" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="sy_rn" type="number" value="${studentInstance.sy_rn}" required=""/>
+	<g:field name="syRollNo" type="number" value="${studentInstance.syRollNo}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'ty_rn', 'error')} required">
-	<label for="ty_rn">
-		<g:message code="student.ty_rn.label" default="Tyrn" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'tyRollNo', 'error')} required">
+	<label for="tyRollNo">
+		<g:message code="student.tyRollNo.label" default="Ty Roll No" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="ty_rn" type="number" value="${studentInstance.ty_rn}" required=""/>
+	<g:field name="tyRollNo" type="number" value="${studentInstance.tyRollNo}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'btech_rn', 'error')} required">
-	<label for="btech_rn">
-		<g:message code="student.btech_rn.label" default="Btechrn" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'btechRollNo', 'error')} required">
+	<label for="btechRollNo">
+		<g:message code="student.btechRollNo.label" default="Btech Roll No" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="btech_rn" type="number" value="${studentInstance.btech_rn}" required=""/>
+	<g:field name="btechRollNo" type="number" value="${studentInstance.btechRollNo}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'fy_div', 'error')} ">
-	<label for="fy_div">
-		<g:message code="student.fy_div.label" default="Fydiv" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'fyDivision', 'error')} ">
+	<label for="fyDivision">
+		<g:message code="student.fyDivision.label" default="Fy Division" />
 		
 	</label>
-	<g:textField name="fy_div" value="${studentInstance?.fy_div}"/>
+	<g:textField name="fyDivision" value="${studentInstance?.fyDivision}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'sy_div', 'error')} ">
-	<label for="sy_div">
-		<g:message code="student.sy_div.label" default="Sydiv" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'syDivision', 'error')} ">
+	<label for="syDivision">
+		<g:message code="student.syDivision.label" default="Sy Division" />
 		
 	</label>
-	<g:textField name="sy_div" value="${studentInstance?.sy_div}"/>
+	<g:textField name="syDivision" value="${studentInstance?.syDivision}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'ty_div', 'error')} ">
-	<label for="ty_div">
-		<g:message code="student.ty_div.label" default="Tydiv" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'tyDivision', 'error')} ">
+	<label for="tyDivision">
+		<g:message code="student.tyDivision.label" default="Ty Division" />
 		
 	</label>
-	<g:textField name="ty_div" value="${studentInstance?.ty_div}"/>
+	<g:textField name="tyDivision" value="${studentInstance?.tyDivision}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'btech_div', 'error')} ">
-	<label for="btech_div">
-		<g:message code="student.btech_div.label" default="Btechdiv" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'btechDivision', 'error')} ">
+	<label for="btechDivision">
+		<g:message code="student.btechDivision.label" default="Btech Division" />
 		
 	</label>
-	<g:textField name="btech_div" value="${studentInstance?.btech_div}"/>
+	<g:textField name="btechDivision" value="${studentInstance?.btechDivision}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'grad_status', 'error')} ">
-	<label for="grad_status">
-		<g:message code="student.grad_status.label" default="Gradstatus" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'graduationStatus', 'error')} ">
+	<label for="graduationStatus">
+		<g:message code="student.graduationStatus.label" default="Graduation Status" />
 		
 	</label>
-	<g:checkBox name="grad_status" value="${studentInstance?.grad_status}" />
+	<g:checkBox name="graduationStatus" value="${studentInstance?.graduationStatus}" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'department', 'error')} required">

@@ -11,6 +11,7 @@ class CoMarksMapping {
     
     static belongsTo=[employee:Employee,assessmentType:AssessmentType,courseOffering:CourseOffering]
     
+  
     static constraints = {
     }
 }

@@ -24,7 +24,7 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="acadamic_year" title="${message(code: 'courseOffering.acadamic_year.label', default: 'Acadamicyear')}" />
+						<g:sortableColumn property="acadamicYear" title="${message(code: 'courseOffering.acadamicYear.label', default: 'Acadamic Year')}" />
 					
 						<th><g:message code="courseOffering.course.label" default="Course" /></th>
 					
@@ -40,7 +40,7 @@
 				<g:each in="${courseOfferingInstanceList}" status="i" var="courseOfferingInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${courseOfferingInstance.id}">${fieldValue(bean: courseOfferingInstance, field: "acadamic_year")}</g:link></td>
+						<td><g:link action="show" id="${courseOfferingInstance.id}">${fieldValue(bean: courseOfferingInstance, field: "acadamicYear")}</g:link></td>
 					
 						<td>${fieldValue(bean: courseOfferingInstance, field: "course")}</td>
 					

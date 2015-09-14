@@ -2,7 +2,7 @@ package nba_vit
 
 class StudentCourse {
     Student student
-    String student_division
+    String studentDivision
     CourseOffering courseOffering
        
     static belongsTo=[student:Student,courseOffering:CourseOffering]

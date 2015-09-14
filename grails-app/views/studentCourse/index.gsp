@@ -28,7 +28,7 @@
 					
 						<th><g:message code="studentCourse.student.label" default="Student" /></th>
 					
-						<g:sortableColumn property="student_division" title="${message(code: 'studentCourse.student_division.label', default: 'Studentdivision')}" />
+						<g:sortableColumn property="studentDivision" title="${message(code: 'studentCourse.studentDivision.label', default: 'Student Division')}" />
 					
 					</tr>
 				</thead>
@@ -40,7 +40,7 @@
 					
 						<td>${fieldValue(bean: studentCourseInstance, field: "student")}</td>
 					
-						<td>${fieldValue(bean: studentCourseInstance, field: "student_division")}</td>
+						<td>${fieldValue(bean: studentCourseInstance, field: "studentDivision")}</td>
 					
 					</tr>
 				</g:each>

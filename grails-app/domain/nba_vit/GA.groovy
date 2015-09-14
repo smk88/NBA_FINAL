@@ -1,12 +1,14 @@
 package nba_vit
 
 class GA {
-
-  String ga_statement
+  
+  String gaCode  
+  String gaStatement
+    
     String toString(){
-        ga_statement
+        gaCode
     }
     static constraints = {
-        ga_statement nullable:false
+        gaStatement nullable:false
     }
 }

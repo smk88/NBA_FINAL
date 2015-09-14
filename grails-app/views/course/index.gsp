@@ -24,17 +24,17 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="course_code" title="${message(code: 'course.course_code.label', default: 'Coursecode')}" />
+						<g:sortableColumn property="courseCode" title="${message(code: 'course.courseCode.label', default: 'Course Code')}" />
 					
-						<g:sortableColumn property="course_name" title="${message(code: 'course.course_name.label', default: 'Coursename')}" />
+						<g:sortableColumn property="courseCredit" title="${message(code: 'course.courseCredit.label', default: 'Course Credit')}" />
+					
+						<g:sortableColumn property="courseName" title="${message(code: 'course.courseName.label', default: 'Course Name')}" />
+					
+						<th><g:message code="course.courseType.label" default="Course Type" /></th>
 					
 						<th><g:message code="course.coursetype.label" default="Coursetype" /></th>
 					
-						<g:sortableColumn property="credit" title="${message(code: 'course.credit.label', default: 'Credit')}" />
-					
 						<th><g:message code="course.employee.label" default="Employee" /></th>
-					
-						<g:sortableColumn property="module" title="${message(code: 'course.module.label', default: 'Module')}" />
 					
 					</tr>
 				</thead>
@@ -42,17 +42,17 @@
 				<g:each in="${courseInstanceList}" status="i" var="courseInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${courseInstance.id}">${fieldValue(bean: courseInstance, field: "course_code")}</g:link></td>
+						<td><g:link action="show" id="${courseInstance.id}">${fieldValue(bean: courseInstance, field: "courseCode")}</g:link></td>
 					
-						<td>${fieldValue(bean: courseInstance, field: "course_name")}</td>
+						<td>${fieldValue(bean: courseInstance, field: "courseCredit")}</td>
+					
+						<td>${fieldValue(bean: courseInstance, field: "courseName")}</td>
+					
+						<td>${fieldValue(bean: courseInstance, field: "courseType")}</td>
 					
 						<td>${fieldValue(bean: courseInstance, field: "coursetype")}</td>
 					
-						<td>${fieldValue(bean: courseInstance, field: "credit")}</td>
-					
 						<td>${fieldValue(bean: courseInstance, field: "employee")}</td>
-					
-						<td>${fieldValue(bean: courseInstance, field: "module")}</td>
 					
 					</tr>
 				</g:each>

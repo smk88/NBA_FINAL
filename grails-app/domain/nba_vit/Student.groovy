@@ -1,45 +1,46 @@
 package nba_vit
 
-class Student {
-String name
-String grno
-String curr_yr
-String academic_yr
-int fy_rn
-int sy_rn
-int ty_rn
-int btech_rn
-String fy_div
-String sy_div
-String ty_div
-String btech_div
-boolean grad_status
+    class Student {
+    String name
+    String grNumber
+    String currentYear
+    String academicYear
+    int fyRollNo
+    int syRollNo
+    int tyRollNo
+    int btechRollNo
+    String fyDivision
+    String syDivision
+    String tyDivision
+    String btechDivision
+    boolean graduationStatus
     String email
-    String mob
+    String mobileNumber
     Department department
     Program program
     static belongsTo=[department:Department,program:Program]
-  
+    String toString(){
+        grNumber
+    }
     static constraints = {
-         grno nullable:false
+         grNumber nullable:false
          name nullable:false
          email email : true
-         mob nullable: true
-         curr_yr nullable:false
-         academic_yr nullable:false
-         fy_rn nullable: true
-         sy_rn nullable: true
-         ty_rn nullable: true
-         btech_rn nullable: true
-         fy_div nullable: true
-         sy_div nullable: true
-         ty_div nullable: true
-         btech_div nullable: true
-        grad_status nullable:false
-        
+         mobileNumber nullable: true
+         currentYear nullable:false
+         academicYear nullable:false
+         fyRollNo nullable: true
+         syRollNo nullable: true
+         tyRollNo nullable: true
+         btechRollNo nullable: true
+         fyDivision nullable: true
+         syDivision nullable: true
+         tyDivision nullable: true
+         btechDivision nullable: true
+         graduationStatus nullable:false        
     }
     static mapping = {
-       grad_status defaultValue: false
+       graduationStatus defaultValue: false
        //This will reflect in db instead of fy_rn it will be FY_RN 
      /*  table 'student'
        fy_rn column: 'FY_RN'*/
