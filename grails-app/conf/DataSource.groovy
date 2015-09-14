@@ -15,19 +15,19 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create" // one of 'create', 'create-drop', 'update', 'validate', ''
+            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://172.21.0.144:3306/nba_vit1"//;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
     test {
         dataSource {
-            dbCreate = "create"
+            dbCreate = "update"
             url = "jdbc:mysql://172.21.0.144:3306/nba_vit1"//;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
     production {
         dataSource {
-            dbCreate = "create"
+            dbCreate = "update"
             url = "jdbc:mysql://172.21.0.144:3306/nba_vit1"//;MVCC=TRUE;LOCK_TIMEOUT=10000"
             properties {
                maxActive = -1
