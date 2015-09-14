@@ -6,9 +6,7 @@ class Login {
     String pwd
     UserType usertype
     static belongsTo=[usertype:UserType]
-    
-    
-    
+        
     static constraints = {
         username nullable:false
         pwd nullable:false, password:true

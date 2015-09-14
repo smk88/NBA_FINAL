@@ -24,7 +24,7 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="usertype" title="${message(code: 'userType.usertype.label', default: 'Usertype')}" />
+						<g:sortableColumn property="type" title="${message(code: 'userType.type.label', default: 'Type')}" />
 					
 					</tr>
 				</thead>
@@ -32,7 +32,7 @@
 				<g:each in="${userTypeInstanceList}" status="i" var="userTypeInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${userTypeInstance.id}">${fieldValue(bean: userTypeInstance, field: "usertype")}</g:link></td>
+						<td><g:link action="show" id="${userTypeInstance.id}">${fieldValue(bean: userTypeInstance, field: "type")}</g:link></td>
 					
 					</tr>
 				</g:each>

@@ -7,9 +7,10 @@ class Employee {
     String email
     String mob
     Department department
-    Program program
+    Program program    
     static belongsTo=[department:Department,program:Program,role:Role]
     static hasMany=[role:Role]
+    
     static constraints = {
         name nullable:false
         eid nullable:false

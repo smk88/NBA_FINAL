@@ -1,8 +1,8 @@
 dataSource {
     pooled = true
     driverClassName = "com.mysql.jdbc.Driver"
-    username = "root"
-    password = ""
+    username = "NPP"
+    password = "npp"
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -16,19 +16,19 @@ environments {
     development {
         dataSource {
             dbCreate = "create" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:mysql://localhost:3306/nba_vit1"//;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            url = "jdbc:mysql://172.21.0.144:3306/nba_vit1"//;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
     test {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/nba_vit1"//;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            dbCreate = "create"
+            url = "jdbc:mysql://172.21.0.144:3306/nba_vit1"//;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
     production {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/nba_vit1"//;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            dbCreate = "create"
+            url = "jdbc:mysql://172.21.0.144:3306/nba_vit1"//;MVCC=TRUE;LOCK_TIMEOUT=10000"
             properties {
                maxActive = -1
                minEvictableIdleTimeMillis=1800000

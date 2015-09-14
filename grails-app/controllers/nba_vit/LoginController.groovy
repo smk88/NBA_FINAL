@@ -11,15 +11,12 @@ class LoginController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        println("index method called")
         params.max = Math.min(max ?: 10, 100)
-        //println(params)
         respond Login.list(params), model:[loginInstanceCount: Login.count()]
     }
 
     def show(Login loginInstance) {
         respond loginInstance
-        
     }
 
     def create() {
@@ -103,22 +100,5 @@ class LoginController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }
-    
-    
-    public def authenticate()
-    {              
-        println("Now in authenticate")
-        def username = params.username
-        def pwd = params.pwd
-        def user=Login.findByUsernameAndPwd(username,pwd)      
-        if(user!=null)
-        {
-            println("Hello $user.username");
-            session.setAttribute("user",user)
-            render(view:'authenticate.gsp')
-            session.getAt("user")
-        }
-        //        println("end of authenticate")
     }
 }

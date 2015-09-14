@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list userType">
 			
-				<g:if test="${userTypeInstance?.usertype}">
+				<g:if test="${userTypeInstance?.type}">
 				<li class="fieldcontain">
-					<span id="usertype-label" class="property-label"><g:message code="userType.usertype.label" default="Usertype" /></span>
+					<span id="type-label" class="property-label"><g:message code="userType.type.label" default="Type" /></span>
 					
-						<span class="property-value" aria-labelledby="usertype-label"><g:fieldValue bean="${userTypeInstance}" field="usertype"/></span>
+						<span class="property-value" aria-labelledby="type-label"><g:fieldValue bean="${userTypeInstance}" field="type"/></span>
 					
 				</li>
 				</g:if>

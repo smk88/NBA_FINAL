@@ -2,11 +2,11 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: userTypeInstance, field: 'usertype', 'error')} ">
-	<label for="usertype">
-		<g:message code="userType.usertype.label" default="Usertype" />
+<div class="fieldcontain ${hasErrors(bean: userTypeInstance, field: 'type', 'error')} ">
+	<label for="type">
+		<g:message code="userType.type.label" default="Type" />
 		
 	</label>
-	<g:textField name="usertype" value="${userTypeInstance?.usertype}"/>
+	<g:textField name="type" value="${userTypeInstance?.type}"/>
 </div>
 

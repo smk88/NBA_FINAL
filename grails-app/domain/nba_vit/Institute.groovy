@@ -7,6 +7,9 @@ class Institute {
     String vision
     String mission
     Date vm_crtd_date
+    
+    
+    
     String toString()
     {
         name

@@ -57,12 +57,6 @@
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
-                        
-                        <g:form  controller="Login" action="authenticate"  method="POST">
-                            <g:textField name="username" value=""/>
-                            <g:passwordField name="pwd" value=""/>
-                          <g:actionSubmit value="Login" />
-			</g:form>
 		</div>
 	</body>
 </html>
