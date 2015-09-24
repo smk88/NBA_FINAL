@@ -1,46 +1,50 @@
 package nba_vit
 
     class Student {
-    String name
-    String grNumber
-    String currentYear
-    String academicYear
-    int fyRollNo
-    int syRollNo
-    int tyRollNo
-    int btechRollNo
-    String fyDivision
-    String syDivision
-    String tyDivision
-    String btechDivision
-    boolean graduationStatus
+    String first_name
+    String middle_name
+    String surname
+    String gr_number
+    String current_year
+    String current_module
+    String academic_year
+    String fy_rollno
+    String sy_rollno
+    String ty_rollno
+    String btech_rollno
+    String fy_division
+    String sy_division
+    String ty_division
+    String btech_division
+    boolean graduation_status
     String email
-    String mobileNumber
-    Department department
-    Program program
-    static belongsTo=[department:Department,program:Program]
+    String mobile_number
+    String current_address
+    String permanent_address
+    
+    static belongsTo=[program:Program]
     String toString(){
-        grNumber
+        gr_number
     }
-    static constraints = {
-         grNumber nullable:false
-         name nullable:false
-         email email : true
-         mobileNumber nullable: true
-         currentYear nullable:false
-         academicYear nullable:false
-         fyRollNo nullable: true
-         syRollNo nullable: true
-         tyRollNo nullable: true
-         btechRollNo nullable: true
-         fyDivision nullable: true
-         syDivision nullable: true
-         tyDivision nullable: true
-         btechDivision nullable: true
-         graduationStatus nullable:false        
+    static constraints = {     
+         gr_number unique : true, blank: false 
+         email email : true, nullable: true     
+         mobile_number nullable: true       
+         fy_rollno nullable: true
+         sy_rollno nullable: true
+         ty_rollno nullable: true
+         btech_rollno nullable: true
+         fy_division nullable: true
+         sy_division nullable: true
+         ty_division nullable: true
+         btech_division nullable: true   
+         middle_name nullable: true 
+         first_name nullable: true 
+         current_address nullable: true 
+         permanent_address nullable: true  
     }
     static mapping = {
-       graduationStatus defaultValue: false
+       graduation_status defaultValue: false
        //This will reflect in db instead of fy_rn it will be FY_RN 
      /*  table 'student'
        fy_rn column: 'FY_RN'*/

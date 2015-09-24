@@ -1,18 +1,14 @@
 package nba_vit
 
-class CoMarksMapping {
-    Course course
+class CoMarksMapping {   
     int percentage
-    int actualMarks
-    int assessmentMarks 
-    CourseOffering courseOffering 
-    AssessmentType assessmentType
-    Employee employee
+    int actual_marks
+    int assessment_marks    
     
-    static belongsTo=[employee:Employee,assessmentType:AssessmentType,courseOffering:CourseOffering]
-    
+    static belongsTo=[course:Course,employee:Employee,assessment_type:AssessmentType,course_offering:CourseOffering]
+   // static hasOne=[course:Course,employee:Employee,assessmentType:AssessmentType,courseOffering:CourseOffering]
   
-    static constraints = {
+    static constraints = {  
     }
 }
 

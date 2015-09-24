@@ -50,15 +50,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${courseInstance?.courseType}">
-				<li class="fieldcontain">
-					<span id="courseType-label" class="property-label"><g:message code="course.courseType.label" default="Course Type" /></span>
-					
-						<span class="property-value" aria-labelledby="courseType-label"><g:link controller="courseType" action="show" id="${courseInstance?.courseType?.id}">${courseInstance?.courseType?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${courseInstance?.coursetype}">
 				<li class="fieldcontain">
 					<span id="coursetype-label" class="property-label"><g:message code="course.coursetype.label" default="Coursetype" /></span>

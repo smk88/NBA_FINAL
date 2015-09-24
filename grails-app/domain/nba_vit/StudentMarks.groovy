@@ -2,13 +2,10 @@ package nba_vit
 
 class StudentMarks {
     
-    Student student
-    CourseOffering courseOffering
-    AssessmentType assessmentType
-    int assessmentMarks
-    int actualMarks
+    int assessment_marks
+    int actual_marks
     
-    static belongsTo=[student:Student,courseOffering:CourseOffering,assessmentType:AssessmentType]
+    static belongsTo=[student:Student,course_offering:CourseOffering,assessment_type:AssessmentType]
         
     static constraints = {
     }

@@ -1,20 +1,19 @@
 package nba_vit
 
 class MarkingScheme {
-    CourseType courseType
-    int homeworkAssignment
+    int homework_assignment
     int tutorial
     int laboratry
     int test1
     int test2
-    int endSEmesterExam
-    int reviewOne
-    int reviewTwo
-    int reviewThree
-    int reviewFour
-    int reviewFile  
+    int end_semester_exam
+    int review_one
+    int review_two
+    int review_three
+    int review_four
+    int review_five  
     
-    static belongsTo=[courseType:CourseType]
+    static belongsTo=[course_type:CourseType]
    
     static constraints = {
     }

@@ -2,23 +2,20 @@ package nba_vit
 
 class Employee {
     String name
-    String employeeId
-    Role role
+    String employee_code    
     String email
-    String mob
-    Department department
-    Program program    
-    static belongsTo=[department:Department,program:Program,role:Role]
-    static hasMany=[role:Role]
+    String mob     
+    static hasMany=[roles:Role]    
+    static belongsTo=[designation:Designation, program:Program]
+    
+   // static hasOne=[program:Program,department:Department]
     
      String toString ()  {
-        employeeId
+        employee_code
     }
     
     static constraints = {
-        name nullable:false
-        employeeId nullable:false
-        //email email : true
-        
+        employee_code unique : true, blank: false
+        email email : true        
     }
 }

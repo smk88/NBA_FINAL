@@ -1,16 +1,15 @@
 package nba_vit
 
 class Program {
-    String name
-    Department department
-    
+    String name     
     static belongsTo=[department:Department]
+    
     String toString()
     {
         name
     }
     static constraints = {
-         name nullable:false
+        
         // institute nullable:false
     }
 }

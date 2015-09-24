@@ -26,14 +26,6 @@
 	<g:textField name="courseName" value="${courseInstance?.courseName}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'courseType', 'error')} required">
-	<label for="courseType">
-		<g:message code="course.courseType.label" default="Course Type" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="courseType" name="courseType.id" from="${nba_vit.CourseType.list()}" optionKey="id" required="" value="${courseInstance?.courseType?.id}" class="many-to-one"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'coursetype', 'error')} required">
 	<label for="coursetype">
 		<g:message code="course.coursetype.label" default="Coursetype" />

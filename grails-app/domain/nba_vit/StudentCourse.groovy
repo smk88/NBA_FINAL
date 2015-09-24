@@ -1,11 +1,10 @@
 package nba_vit
 
 class StudentCourse {
-    Student student
-    String studentDivision
-    CourseOffering courseOffering
+  
+    String student_division
        
-    static belongsTo=[student:Student,courseOffering:CourseOffering]
+    static belongsTo=[student:Student,course_offering:CourseOffering]
 
     static constraints = {
     }

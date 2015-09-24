@@ -8,6 +8,6 @@ class AssessmentType {
         type    
     }
     static constraints = {
-        type nullable: false
+       
     }
 }

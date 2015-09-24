@@ -2,13 +2,13 @@ package nba_vit
 
 class PO {
     
-    String poCode   
-    String poStatement
+    String po_code   
+    String po_statement
     
     String toString(){
-        poCode
+        po_code
     }
     static constraints = {
-        poStatement nullable:false
+       po_code nullable : true
     }
 }

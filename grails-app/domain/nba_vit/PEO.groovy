@@ -2,13 +2,13 @@ package nba_vit
 
 class PEO {     
     
-    String peoCode
-    String peoStatement
+    String peo_code
+    String peo_Statement
         
     String toString(){
-        peoCode
+        peo_code
     }
     static constraints = {
-        peoStatement nullable:false
+       peo_code nullable : true
     }
 }

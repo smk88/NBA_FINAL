@@ -1,21 +1,17 @@
 package nba_vit
 
 class Course {
-
-    String courseCode
-    String courseName
-    CourseType courseType
-    int courseCredit    
+    String course_code
+    String course_name    
+    int course_credit    
     int semester
     int module
-    Employee  employee    
-    
-    static belongsTo=[coursetype:CourseType,employee:Employee]
+    static belongsTo=[program:Program, course_type:CourseType,employee:Employee]
     
     String toString(){
-        courseCode
+        course_code
     }
     static constraints = {
-        courseCode nullable:false
+         
     }
 }

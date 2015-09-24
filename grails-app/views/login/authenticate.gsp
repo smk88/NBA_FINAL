@@ -12,7 +12,6 @@
         <title>Sample title</title>
     </head>
     <body>
-        <h1>Sample line </h1>
-        <p>${session.user.username}</p>
+        <h1>Hello ${session.role}</h1>
     </body>
 </html>

@@ -4,13 +4,10 @@ class Login {
 
     String username
     String pwd
-    UserType usertype
     
-    static belongsTo=[usertype:UserType]
+    static belongsTo=[user_type:UserType]
         
     static constraints = {
-        username nullable:false
-        pwd nullable:false, password:true
-        
+      username unique : true, blank: false
     }
 }

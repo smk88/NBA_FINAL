@@ -30,11 +30,11 @@
 					
 						<g:sortableColumn property="courseName" title="${message(code: 'course.courseName.label', default: 'Course Name')}" />
 					
-						<th><g:message code="course.courseType.label" default="Course Type" /></th>
-					
 						<th><g:message code="course.coursetype.label" default="Coursetype" /></th>
 					
 						<th><g:message code="course.employee.label" default="Employee" /></th>
+					
+						<g:sortableColumn property="module" title="${message(code: 'course.module.label', default: 'Module')}" />
 					
 					</tr>
 				</thead>
@@ -48,11 +48,11 @@
 					
 						<td>${fieldValue(bean: courseInstance, field: "courseName")}</td>
 					
-						<td>${fieldValue(bean: courseInstance, field: "courseType")}</td>
-					
 						<td>${fieldValue(bean: courseInstance, field: "coursetype")}</td>
 					
 						<td>${fieldValue(bean: courseInstance, field: "employee")}</td>
+					
+						<td>${fieldValue(bean: courseInstance, field: "module")}</td>
 					
 					</tr>
 				</g:each>

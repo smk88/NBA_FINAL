@@ -7,6 +7,6 @@ class UserType {
         type    
     }
     static constraints = {
-        type nullable: false
+       
     }
 }

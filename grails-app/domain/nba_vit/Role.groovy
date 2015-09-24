@@ -1,7 +1,6 @@
 package nba_vit
 
 class Role {
-  //  Employee eid;
     String role
     
     String toString(){

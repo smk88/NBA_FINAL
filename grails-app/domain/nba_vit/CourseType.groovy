@@ -7,6 +7,6 @@ class CourseType {
         type    
     }
     static constraints = {
-        type nullable: false
+        
     }
 }

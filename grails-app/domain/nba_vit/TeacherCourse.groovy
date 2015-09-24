@@ -1,11 +1,9 @@
 package nba_vit
 
 class TeacherCourse {
-    Employee employee
-    String teacherDivison
-    CourseOffering  courseOffering
-
-    static belongsTo=[employee:Employee,courseOffering:CourseOffering]   
+    String teacher_divison
+    
+    static belongsTo=[employee:Employee,course_offering:CourseOffering]   
     
     static constraints = {
     }

@@ -3,13 +3,11 @@ package nba_vit
 class Institute {
     String name
     String address
-    Date establishmentDate
+    Date establishment_date
     String vision
     String mission
-    Date vmCreatedDate
-    
-    
-    
+    Date vm_created_date
+           
     String toString()
     {
         name
@@ -17,12 +15,7 @@ class Institute {
 
     
     static constraints = {
-        name nullable:false
-        address nullable:false
-        establishmentDate nullable:false
-        vision nullable:false
-        mission nullable:false
-        vmCreatedDate nullable:false
+        
         
     }
 }

@@ -101,4 +101,10 @@ class EmployeeController {
             '*'{ render status: NOT_FOUND }
         }
     }
+//    def home={
+//        def emp = session.role
+//                
+//                 [emp:emp]
+//                 println("Emp="+emp)
+//    }
 }
