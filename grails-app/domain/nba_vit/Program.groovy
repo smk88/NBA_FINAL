@@ -2,7 +2,7 @@ package nba_vit
 
 class Program {
     String name     
-    static belongsTo=[department:Department]
+    static belongsTo=[programType:ProgramType ,department:Department]
     
     String toString()
     {

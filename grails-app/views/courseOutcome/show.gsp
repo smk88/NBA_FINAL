@@ -23,29 +23,29 @@
 			</g:if>
 			<ol class="property-list courseOutcome">
 			
-				<g:if test="${courseOutcomeInstance?.acadamicYear}">
+				<g:if test="${courseOutcomeInstance?.acadamic_year}">
 				<li class="fieldcontain">
-					<span id="acadamicYear-label" class="property-label"><g:message code="courseOutcome.acadamicYear.label" default="Acadamic Year" /></span>
+					<span id="acadamic_year-label" class="property-label"><g:message code="courseOutcome.acadamic_year.label" default="Acadamicyear" /></span>
 					
-						<span class="property-value" aria-labelledby="acadamicYear-label"><g:fieldValue bean="${courseOutcomeInstance}" field="acadamicYear"/></span>
+						<span class="property-value" aria-labelledby="acadamic_year-label"><g:fieldValue bean="${courseOutcomeInstance}" field="acadamic_year"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${courseOutcomeInstance?.coCode}">
+				<g:if test="${courseOutcomeInstance?.co_code}">
 				<li class="fieldcontain">
-					<span id="coCode-label" class="property-label"><g:message code="courseOutcome.coCode.label" default="Co Code" /></span>
+					<span id="co_code-label" class="property-label"><g:message code="courseOutcome.co_code.label" default="Cocode" /></span>
 					
-						<span class="property-value" aria-labelledby="coCode-label"><g:fieldValue bean="${courseOutcomeInstance}" field="coCode"/></span>
+						<span class="property-value" aria-labelledby="co_code-label"><g:fieldValue bean="${courseOutcomeInstance}" field="co_code"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${courseOutcomeInstance?.coStatement}">
+				<g:if test="${courseOutcomeInstance?.co_statement}">
 				<li class="fieldcontain">
-					<span id="coStatement-label" class="property-label"><g:message code="courseOutcome.coStatement.label" default="Co Statement" /></span>
+					<span id="co_statement-label" class="property-label"><g:message code="courseOutcome.co_statement.label" default="Costatement" /></span>
 					
-						<span class="property-value" aria-labelledby="coStatement-label"><g:fieldValue bean="${courseOutcomeInstance}" field="coStatement"/></span>
+						<span class="property-value" aria-labelledby="co_statement-label"><g:fieldValue bean="${courseOutcomeInstance}" field="co_statement"/></span>
 					
 				</li>
 				</g:if>
@@ -55,15 +55,6 @@
 					<span id="course-label" class="property-label"><g:message code="courseOutcome.course.label" default="Course" /></span>
 					
 						<span class="property-value" aria-labelledby="course-label"><g:link controller="course" action="show" id="${courseOutcomeInstance?.course?.id}">${courseOutcomeInstance?.course?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${courseOutcomeInstance?.employee}">
-				<li class="fieldcontain">
-					<span id="employee-label" class="property-label"><g:message code="courseOutcome.employee.label" default="Employee" /></span>
-					
-						<span class="property-value" aria-labelledby="employee-label"><g:link controller="employee" action="show" id="${courseOutcomeInstance?.employee?.id}">${courseOutcomeInstance?.employee?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

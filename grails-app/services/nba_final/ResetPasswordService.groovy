@@ -18,6 +18,7 @@ class ResetPasswordService {
     boolean setPassword(params,user)
     {
         //String user=user
+        println("params = "+params)
         println("User = "+user)
         String newpwd = params.newpwd
         String confpwd = params.confpwd

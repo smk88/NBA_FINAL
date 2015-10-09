@@ -23,15 +23,6 @@
 			</g:if>
 			<ol class="property-list institute">
 			
-				<g:if test="${instituteInstance?.name}">
-				<li class="fieldcontain">
-					<span id="name-label" class="property-label"><g:message code="institute.name.label" default="Name" /></span>
-					
-						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${instituteInstance}" field="name"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${instituteInstance?.address}">
 				<li class="fieldcontain">
 					<span id="address-label" class="property-label"><g:message code="institute.address.label" default="Address" /></span>
@@ -41,20 +32,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${instituteInstance?.establishmentDate}">
+				<g:if test="${instituteInstance?.establishment_date}">
 				<li class="fieldcontain">
-					<span id="establishmentDate-label" class="property-label"><g:message code="institute.establishmentDate.label" default="Establishment Date" /></span>
+					<span id="establishment_date-label" class="property-label"><g:message code="institute.establishment_date.label" default="Establishmentdate" /></span>
 					
-						<span class="property-value" aria-labelledby="establishmentDate-label"><g:formatDate date="${instituteInstance?.establishmentDate}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${instituteInstance?.vision}">
-				<li class="fieldcontain">
-					<span id="vision-label" class="property-label"><g:message code="institute.vision.label" default="Vision" /></span>
-					
-						<span class="property-value" aria-labelledby="vision-label"><g:fieldValue bean="${instituteInstance}" field="vision"/></span>
+						<span class="property-value" aria-labelledby="establishment_date-label"><g:formatDate date="${instituteInstance?.establishment_date}" /></span>
 					
 				</li>
 				</g:if>
@@ -68,11 +50,29 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${instituteInstance?.vmCreatedDate}">
+				<g:if test="${instituteInstance?.name}">
 				<li class="fieldcontain">
-					<span id="vmCreatedDate-label" class="property-label"><g:message code="institute.vmCreatedDate.label" default="Vm Created Date" /></span>
+					<span id="name-label" class="property-label"><g:message code="institute.name.label" default="Name" /></span>
 					
-						<span class="property-value" aria-labelledby="vmCreatedDate-label"><g:formatDate date="${instituteInstance?.vmCreatedDate}" /></span>
+						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${instituteInstance}" field="name"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${instituteInstance?.vision}">
+				<li class="fieldcontain">
+					<span id="vision-label" class="property-label"><g:message code="institute.vision.label" default="Vision" /></span>
+					
+						<span class="property-value" aria-labelledby="vision-label"><g:fieldValue bean="${instituteInstance}" field="vision"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${instituteInstance?.vm_created_date}">
+				<li class="fieldcontain">
+					<span id="vm_created_date-label" class="property-label"><g:message code="institute.vm_created_date.label" default="Vmcreateddate" /></span>
+					
+						<span class="property-value" aria-labelledby="vm_created_date-label"><g:formatDate date="${instituteInstance?.vm_created_date}" /></span>
 					
 				</li>
 				</g:if>

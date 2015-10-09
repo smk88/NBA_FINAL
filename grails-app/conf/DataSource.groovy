@@ -1,8 +1,8 @@
 dataSource {
     pooled = true
     driverClassName = "com.mysql.jdbc.Driver"
-    username = "PC"
-    password = "pc"
+    username = "root"
+    password = "prashant@123"
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -16,7 +16,7 @@ environments {
     development {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:mysql://172.21.0.145/vit"//;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            url = "jdbc:mysql://localhost:3306/vit"//;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
     test {

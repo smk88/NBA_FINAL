@@ -1,19 +1,8 @@
 <html>
 <head>
-<title>VIT NBA Software </title> 
-<link rel = "stylesheet" type = "text/css" href="${resource(dir: 'css', file: 'global.css')}">
-</head>
-
-<body>
-			<div id="header">
-                    <img id ="vitlogo" src = "${resource(dir: 'images', file: 'vit_logo.png')}" alt="vitlogo" >					
-                    <p> Vishwakarma Institute Of Technology, Pune </br><small id ="header1">NBA Software</small></p>
-			</div>
-			
-			<!-- <div id = "containerBand">
-				
-			</div>  -->
-			
+     <meta name="layout" content="nbalayout"/>
+    </head>
+		<body>	
 			<div id = "container">
 				<div class = "sidebar">
 					<ul id = "sideBarList"> 

@@ -23,38 +23,47 @@
 			</g:if>
 			<ol class="property-list course">
 			
-				<g:if test="${courseInstance?.courseCode}">
+				<g:if test="${courseInstance?.courseCategory}">
 				<li class="fieldcontain">
-					<span id="courseCode-label" class="property-label"><g:message code="course.courseCode.label" default="Course Code" /></span>
+					<span id="courseCategory-label" class="property-label"><g:message code="course.courseCategory.label" default="Course Category" /></span>
 					
-						<span class="property-value" aria-labelledby="courseCode-label"><g:fieldValue bean="${courseInstance}" field="courseCode"/></span>
+						<span class="property-value" aria-labelledby="courseCategory-label"><g:link controller="courseCategory" action="show" id="${courseInstance?.courseCategory?.id}">${courseInstance?.courseCategory?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${courseInstance?.courseCredit}">
+				<g:if test="${courseInstance?.course_code}">
 				<li class="fieldcontain">
-					<span id="courseCredit-label" class="property-label"><g:message code="course.courseCredit.label" default="Course Credit" /></span>
+					<span id="course_code-label" class="property-label"><g:message code="course.course_code.label" default="Coursecode" /></span>
 					
-						<span class="property-value" aria-labelledby="courseCredit-label"><g:fieldValue bean="${courseInstance}" field="courseCredit"/></span>
+						<span class="property-value" aria-labelledby="course_code-label"><g:fieldValue bean="${courseInstance}" field="course_code"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${courseInstance?.courseName}">
+				<g:if test="${courseInstance?.course_credit}">
 				<li class="fieldcontain">
-					<span id="courseName-label" class="property-label"><g:message code="course.courseName.label" default="Course Name" /></span>
+					<span id="course_credit-label" class="property-label"><g:message code="course.course_credit.label" default="Coursecredit" /></span>
 					
-						<span class="property-value" aria-labelledby="courseName-label"><g:fieldValue bean="${courseInstance}" field="courseName"/></span>
+						<span class="property-value" aria-labelledby="course_credit-label"><g:fieldValue bean="${courseInstance}" field="course_credit"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${courseInstance?.coursetype}">
+				<g:if test="${courseInstance?.course_name}">
 				<li class="fieldcontain">
-					<span id="coursetype-label" class="property-label"><g:message code="course.coursetype.label" default="Coursetype" /></span>
+					<span id="course_name-label" class="property-label"><g:message code="course.course_name.label" default="Coursename" /></span>
 					
-						<span class="property-value" aria-labelledby="coursetype-label"><g:link controller="courseType" action="show" id="${courseInstance?.coursetype?.id}">${courseInstance?.coursetype?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="course_name-label"><g:fieldValue bean="${courseInstance}" field="course_name"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${courseInstance?.course_type}">
+				<li class="fieldcontain">
+					<span id="course_type-label" class="property-label"><g:message code="course.course_type.label" default="Coursetype" /></span>
+					
+						<span class="property-value" aria-labelledby="course_type-label"><g:link controller="courseType" action="show" id="${courseInstance?.course_type?.id}">${courseInstance?.course_type?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -73,6 +82,15 @@
 					<span id="module-label" class="property-label"><g:message code="course.module.label" default="Module" /></span>
 					
 						<span class="property-value" aria-labelledby="module-label"><g:fieldValue bean="${courseInstance}" field="module"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${courseInstance?.program}">
+				<li class="fieldcontain">
+					<span id="program-label" class="property-label"><g:message code="course.program.label" default="Program" /></span>
+					
+						<span class="property-value" aria-labelledby="program-label"><g:link controller="program" action="show" id="${courseInstance?.program?.id}">${courseInstance?.program?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

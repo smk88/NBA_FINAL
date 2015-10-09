@@ -60,7 +60,7 @@
       </tr>
       <tr>
         <td> </td>
-        <td> <g:submitButton name="Login" <a class="btn btn-info btn-md" ></a> </g:submitButton> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-info btn-md">Forgot Password</a></td>
+        <td> <g:submitButton name="Login" value="Login" <a class="btn btn-info btn-md" ></a> </g:submitButton> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <g:submitButton name="Forgot" value="Forgot Password" <a class="btn btn-info btn-md"></a></g:submitButton> </td>
       </tr>
     </tbody>
   </table>

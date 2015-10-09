@@ -2,28 +2,28 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: courseOutcomeInstance, field: 'acadamicYear', 'error')} ">
-	<label for="acadamicYear">
-		<g:message code="courseOutcome.acadamicYear.label" default="Acadamic Year" />
+<div class="fieldcontain ${hasErrors(bean: courseOutcomeInstance, field: 'acadamic_year', 'error')} ">
+	<label for="acadamic_year">
+		<g:message code="courseOutcome.acadamic_year.label" default="acadamicyear" />
 		
 	</label>
-	<g:textField name="acadamicYear" value="${courseOutcomeInstance?.acadamicYear}"/>
+	<g:textField name="acadamic_year" value="${session.academic_year}" readonly="readonly"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: courseOutcomeInstance, field: 'coCode', 'error')} ">
-	<label for="coCode">
-		<g:message code="courseOutcome.coCode.label" default="Co Code" />
+<div class="fieldcontain ${hasErrors(bean: courseOutcomeInstance, field: 'co_code', 'error')} ">
+	<label for="co_code">
+		<g:message code="courseOutcome.co_code.label" default="Cocode" />
 		
 	</label>
-	<g:textField name="coCode" value="${courseOutcomeInstance?.coCode}"/>
+	<g:textField name="co_code" value="${courseOutcomeInstance?.co_code}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: courseOutcomeInstance, field: 'coStatement', 'error')} ">
-	<label for="coStatement">
-		<g:message code="courseOutcome.coStatement.label" default="Co Statement" />
+<div class="fieldcontain ${hasErrors(bean: courseOutcomeInstance, field: 'co_statement', 'error')} ">
+	<label for="co_statement">
+		<g:message code="courseOutcome.co_statement.label" default="Costatement" />
 		
 	</label>
-	<g:textField name="coStatement" value="${courseOutcomeInstance?.coStatement}"/>
+	<g:textField name="co_statement" value="${courseOutcomeInstance?.co_statement}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: courseOutcomeInstance, field: 'course', 'error')} required">
@@ -31,14 +31,6 @@
 		<g:message code="courseOutcome.course.label" default="Course" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="course" name="course.id" from="${nba_vit.Course.list()}" optionKey="id" required="" value="${courseOutcomeInstance?.course?.id}" class="many-to-one"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: courseOutcomeInstance, field: 'employee', 'error')} required">
-	<label for="employee">
-		<g:message code="courseOutcome.employee.label" default="Employee" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="employee" name="employee.id" from="${nba_vit.Employee.list()}" optionKey="id" required="" value="${courseOutcomeInstance?.employee?.id}" class="many-to-one"/>
+	<g:select id="course" name="course.id" from="${session.course}" optionKey="id" required="" value="${courseOutcomeInstance?.course?.id}" class="many-to-one"/>
 </div>
 

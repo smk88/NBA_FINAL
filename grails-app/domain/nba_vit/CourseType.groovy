@@ -4,7 +4,7 @@ class CourseType {
     String type
    
     String toString ()  {
-        type    
+        type
     }
     static constraints = {
         

@@ -1,10 +1,14 @@
 package nba_vit
 
-class PEO {     
-    
+class PEO {
+
     String peo_code
-    String peo_Statement
-        
+    String peo_statement
+    static belongsTo=[program:Program]    
+    String revision_year 
+    boolean is_lock
+    boolean is_current
+  
     String toString(){
         peo_code
     }

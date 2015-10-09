@@ -7,15 +7,16 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class LoginController {
-    
+    def SendMailService   
     def loginService
+    def ResetPasswordService
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         println("now in index")
         params.max = Math.min(max ?: 10, 100)
         respond Login.list(params), model:[loginInstanceCount: Login.count()]
-       // redirect(action:authenticate)
+        // redirect(action:authenticate)
         //redirect(action:LogForm)
     }
 
@@ -97,7 +98,7 @@ class LoginController {
     }
 
     protected void notFound() {
-//        println("not found")
+        //        println("not found")
         request.withFormat {
             form {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'loginInstance.label', default: 'Login'), params.id])
@@ -106,24 +107,22 @@ class LoginController {
             '*'{ render status: NOT_FOUND }
         }
     }
-    def forgotpassword={
-        println("In forgot password")
-    }
+
     def find={              
         println("Now in find "+params)
        
         def userFlag=loginService.getUser(params)
         if(userFlag == false)
         {
-            println("user not found")
+//            println("user not found")
             render(view:"/login/login")
         }
         else
         {
             println("user found")
-            println("User = "+session.user)
-            println("Usertype = "+session.usertype)
-            println("User role = "+session.role)
+//            println("User = "+session.user)
+//            println("Usertype = "+session.usertype)
+//            println("User role = "+session.role)
             if(session.usertype.toString()=="Employee")
             {
                 println("sending to employee page")
@@ -133,14 +132,69 @@ class LoginController {
             }
             else if(session.usertype.toString()=="Student")
             {
-                redirect(controller:'EmployeeHome',action:'student')
                 println("sending to student page")
+                redirect(controller:'EmployeeHome',action:'student')
             }
             else
                 println("oops!!!")
-//            render(view:"/login/authenticate")
+            //            render(view:"/login/authenticate")
             
         }
-//        println("Session in contr:"+session)
+        if(params.Forgot.toString()=="Forgot Password")
+        {
+            println("clicked on forgot")
+            render(view:"/login/forgotpassword")
+        }       
+
+        
+        
+        //        println("Session in contr:"+session)
     }
+    
+    
+    def submitotp={
+        println("in submit otp")
+        String username=session.user
+        def otpcompareflag=SendMailService.compareOTP(params,username)
+        if(otpcompareflag==true) 
+        {
+            render(view:"/login/resetpassword")
+        }                
+        else
+        {
+            println("wrong OTP")
+            flash.message="Please Enter Valid OTP..."
+            render(view:"/login/submitotp")
+        }
+    }
+    def resetpassword={
+        println("in reset password of forgot password:"+session.user)              
+        def passwordFlag=ResetPasswordService.setPassword(params,session.user)
+        if(passwordFlag == false)
+        {
+            println("Password cannot change...")
+            render(view:"/login/resetpassword")
+        }
+        if(passwordFlag==true)
+        {     
+            render(view:"/login/login")
+        }       
+    }
+    def forgotpassword={
+        println("I am in forgot password trying to send mail...")
+        def mailFlag=SendMailService.sendMail(params)
+        if(mailFlag == false)
+        {
+            println("Mail Not Sent")
+            render(view:"/login/forgotpassword")
+        }
+        if(mailFlag == true)
+        {
+            println("Mail Sent Successfully...");             
+            //OTP page Here
+            render(view:"/login/submitotp")
+        }
+    }
+
+    
 }

@@ -20,6 +20,10 @@ class PEOController {
     }
 
     def create() {
+        println("PEO controller create")
+        Employee emp = Employee.findByEmployee_code(session.user)
+        session.program = emp.program
+        println(session)
         respond new PEO(params)
     }
 

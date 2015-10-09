@@ -30,8 +30,8 @@ class LoginService {
         Login login = new Login()
         String query = "select user_type from Login where username='"+username+"' and pwd='"+password+"'"
         println("query="+query)
-     //  def l = Login.get(173);
-     //  println("l="+l)
+        //  def l = Login.get(173);
+        //  println("l="+l)
         def type = login.executeQuery(query)
         println("ty: "+type[0].toString())
         if(type[0].toString()!="null")
@@ -44,14 +44,22 @@ class LoginService {
                 def e = Employee.findByEmployee_code(username)
                 session.user = e.employee_code
                 session.usertype = type[0]
-                session.roleText = e.roles
+
+                List roles_list = new ArrayList<String>();
+                for(Role r : e.roles)
+                roles_list.add(r.toString())
+
+                roles_list.sort()
+                println("roles="+e.roles)
+                println("sorted="+roles_list)
+                session.roleText = roles_list
                 def list=[]
-                for(role in e.roles)
+                for(role in roles_list)
                 {
-                    String str = role.toString().replaceAll("\\s","")
+                    String str = role.replaceAll("\\s","")
                     println("role="+str)
                     if(str=="HeadOfDepartment" || str=="HOD"  )
-                        str = "HOD"
+                    str = "HOD"
                     list.add(str)
                 }
                 session.roleLink = list
@@ -60,13 +68,13 @@ class LoginService {
             {
                 session.user = username
                 session.usertype = type[0]
-//                println("Type->Student")
+                //                println("Type->Student")
             }
             if(type[0].toString()=="Admin")
             {
                 session.user = username
                 session.usertype = type[0]
-//                println("Type->Admin")
+                //                println("Type->Admin")
             }
             println("returning true")
             return true

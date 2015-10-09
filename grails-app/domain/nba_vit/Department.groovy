@@ -1,7 +1,7 @@
 package nba_vit
 
 class Department {
-    String name   
+    String name       
     static belongsTo=[institute:Institute]
     
     String toString()

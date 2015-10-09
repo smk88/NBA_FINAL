@@ -24,9 +24,11 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="poStatement" title="${message(code: 'PO.poStatement.label', default: 'Po Statement')}" />
+						<g:sortableColumn property="po_code" title="${message(code: 'PO.po_code.label', default: 'Pocode')}" />
 					
-						<g:sortableColumn property="poCode" title="${message(code: 'PO.poCode.label', default: 'Po Code')}" />
+						<g:sortableColumn property="po_statement" title="${message(code: 'PO.po_statement.label', default: 'Postatement')}" />
+					
+						<th><g:message code="PO.program.label" default="Program" /></th>
 					
 					</tr>
 				</thead>
@@ -34,9 +36,11 @@
 				<g:each in="${POInstanceList}" status="i" var="POInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${POInstance.id}">${fieldValue(bean: POInstance, field: "poStatement")}</g:link></td>
+						<td><g:link action="show" id="${POInstance.id}">${fieldValue(bean: POInstance, field: "po_code")}</g:link></td>
 					
-						<td>${fieldValue(bean: POInstance, field: "poCode")}</td>
+						<td>${fieldValue(bean: POInstance, field: "po_statement")}</td>
+					
+						<td>${fieldValue(bean: POInstance, field: "program")}</td>
 					
 					</tr>
 				</g:each>

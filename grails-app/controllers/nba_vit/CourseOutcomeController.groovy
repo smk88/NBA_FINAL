@@ -20,11 +20,35 @@ class CourseOutcomeController {
     }
 
     def create() {
+        println("create method of course  controller")
+        println(session)
+        Employee emp = Employee.findByEmployee_code(session.user)
+        println(emp)
+        def course = Course.findAllByEmployee(emp)
+        println(course)
+        session.course=course
+        def cy = Calendar.getInstance().get(Calendar.YEAR);
+        String ay = cy +"-"+((cy%2000)+1);
+        println("ay="+ay)
+        session.academic_year = ay
+//        int cos = CO.findAllByCourse(course)
         respond new CourseOutcome(params)
+    }
+    def getTotalCOs(course)
+    {
+        int cos = CO.findAllByCourse(course)
+        println(cos)
     }
 
     @Transactional
     def save(CourseOutcome courseOutcomeInstance) {
+        println("in save method of course outcome")
+        println(courseOutcomeInstance.co_code)
+        println(courseOutcomeInstance.co_statement)
+        println(courseOutcomeInstance.course)
+        courseOutcomeInstance.acadamic_year = session.academic_year
+        println(courseOutcomeInstance.acadamic_year)
+        
         if (courseOutcomeInstance == null) {
             notFound()
             return

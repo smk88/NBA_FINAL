@@ -24,17 +24,17 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="courseCode" title="${message(code: 'course.courseCode.label', default: 'Course Code')}" />
+						<th><g:message code="course.courseCategory.label" default="Course Category" /></th>
 					
-						<g:sortableColumn property="courseCredit" title="${message(code: 'course.courseCredit.label', default: 'Course Credit')}" />
+						<g:sortableColumn property="course_code" title="${message(code: 'course.course_code.label', default: 'Coursecode')}" />
 					
-						<g:sortableColumn property="courseName" title="${message(code: 'course.courseName.label', default: 'Course Name')}" />
+						<g:sortableColumn property="course_credit" title="${message(code: 'course.course_credit.label', default: 'Coursecredit')}" />
 					
-						<th><g:message code="course.coursetype.label" default="Coursetype" /></th>
+						<g:sortableColumn property="course_name" title="${message(code: 'course.course_name.label', default: 'Coursename')}" />
+					
+						<th><g:message code="course.course_type.label" default="Coursetype" /></th>
 					
 						<th><g:message code="course.employee.label" default="Employee" /></th>
-					
-						<g:sortableColumn property="module" title="${message(code: 'course.module.label', default: 'Module')}" />
 					
 					</tr>
 				</thead>
@@ -42,17 +42,17 @@
 				<g:each in="${courseInstanceList}" status="i" var="courseInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${courseInstance.id}">${fieldValue(bean: courseInstance, field: "courseCode")}</g:link></td>
+						<td><g:link action="show" id="${courseInstance.id}">${fieldValue(bean: courseInstance, field: "courseCategory")}</g:link></td>
 					
-						<td>${fieldValue(bean: courseInstance, field: "courseCredit")}</td>
+						<td>${fieldValue(bean: courseInstance, field: "course_code")}</td>
 					
-						<td>${fieldValue(bean: courseInstance, field: "courseName")}</td>
+						<td>${fieldValue(bean: courseInstance, field: "course_credit")}</td>
 					
-						<td>${fieldValue(bean: courseInstance, field: "coursetype")}</td>
+						<td>${fieldValue(bean: courseInstance, field: "course_name")}</td>
+					
+						<td>${fieldValue(bean: courseInstance, field: "course_type")}</td>
 					
 						<td>${fieldValue(bean: courseInstance, field: "employee")}</td>
-					
-						<td>${fieldValue(bean: courseInstance, field: "module")}</td>
 					
 					</tr>
 				</g:each>

@@ -2,19 +2,38 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: GAInstance, field: 'gaStatement', 'error')} ">
-	<label for="gaStatement">
-		<g:message code="GA.gaStatement.label" default="Ga Statement" />
-		
-	</label>
-	<g:textField name="gaStatement" value="${GAInstance?.gaStatement}"/>
-</div>
 
-<div class="fieldcontain ${hasErrors(bean: GAInstance, field: 'gaCode', 'error')} ">
-	<label for="gaCode">
-		<g:message code="GA.gaCode.label" default="Ga Code" />
-		
-	</label>
-	<g:textField name="gaCode" value="${GAInstance?.gaCode}"/>
-</div>
+  <table class="table" class="table table-striped" >    
+<tbody>
+    <tr >
+   <div class="fieldcontain ${hasErrors(bean: GAInstance, field: 'ga_code', 'error')} ">
+        <td class="col-md-3"> <label for="ga_code">
+                    <g:message code="GA.ga_code.label" default="Gratuate Attribute(GA) No" />
 
+                </label> </td>
+           <td> <g:textField class="form-control input-md" name="ga_code" value="${GAInstance?.ga_code}"/></td>
+    </div>
+    </tr>
+    <tr>
+    <div class="fieldcontain ${hasErrors(bean: GAInstance, field: 'ga_statement', 'error')} ">
+        <td class="col-md-3"><label for="ga_statement">
+                    <g:message code="GA.ga_statement.label" default="Gratuate Attribute(GA)Statement" />
+
+                </label></td>
+            <td><g:textField class="form-control input-md" name="ga_statement" value="${GAInstance?.ga_statement}"/></td>
+    </div>
+   </tr>
+   <tr>
+    <div class="fieldcontain ${hasErrors(bean: GAInstance, field: 'program', 'error')} required">
+        <td class="col-md-3"><label for="program">
+                    <g:message code="GA.program.label" default="Program" />
+                    <span class="required-indicator">*</span>
+                </label></td>
+           <td> <g:select class="form-control input-md" id="program" name="program.id" from="${nba_vit.Program.findByName(session.program)}" optionKey="id" required="" value="${GAInstance?.program_type_id}" class="many-to-one"/></td>
+    </div>
+  </tr>
+  <tr>
+      <td></td><td> <g:submitButton class="form save btn btn-info btn-md" name="create" value="create"> Create</g:submitButton></td>
+  <tr>
+<tbody>
+</table>

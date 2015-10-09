@@ -10,7 +10,7 @@ class Employee {
     
    // static hasOne=[program:Program,department:Department]
     
-     String toString ()  {
+    String toString ()  {
         employee_code
     }
     

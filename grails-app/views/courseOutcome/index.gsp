@@ -32,7 +32,6 @@
 					
 						<th><g:message code="courseOutcome.course.label" default="Course" /></th>
 					
-						<th><g:message code="courseOutcome.employee.label" default="Employee" /></th>
 					
 					</tr>
 				</thead>
@@ -40,15 +39,13 @@
 				<g:each in="${courseOutcomeInstanceList}" status="i" var="courseOutcomeInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${courseOutcomeInstance.id}">${fieldValue(bean: courseOutcomeInstance, field: "acadamicYear")}</g:link></td>
+						<td><g:link action="show" id="${courseOutcomeInstance.id}">${fieldValue(bean: courseOutcomeInstance, field: "acadamic_year")}</g:link></td>
 					
-						<td>${fieldValue(bean: courseOutcomeInstance, field: "coCode")}</td>
+						<td>${fieldValue(bean: courseOutcomeInstance, field: "co_code")}</td>
 					
-						<td>${fieldValue(bean: courseOutcomeInstance, field: "coStatement")}</td>
+						<td>${fieldValue(bean: courseOutcomeInstance, field: "co_statement")}</td>
 					
 						<td>${fieldValue(bean: courseOutcomeInstance, field: "course")}</td>
-					
-						<td>${fieldValue(bean: courseOutcomeInstance, field: "employee")}</td>
 					
 					</tr>
 				</g:each>
