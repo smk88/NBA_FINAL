@@ -8,8 +8,7 @@ class Role {
     }
     static constraints = {
         role nullable:false
-    }
-    static mapping={
-        sort role:"asc"
+        
+        // institute nullable:false
     }
 }

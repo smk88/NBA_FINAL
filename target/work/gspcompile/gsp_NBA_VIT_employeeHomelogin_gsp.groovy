@@ -24,22 +24,25 @@ printHtmlPart(4)
 expressionOut.print(resource(dir: 'css', file: 'global.css'))
 printHtmlPart(5)
 })
-invokeTag('captureHead','sitemesh',23,[:],1)
+invokeTag('captureHead','sitemesh',29,[:],1)
 printHtmlPart(6)
 createTagBody(1, {->
 printHtmlPart(7)
 expressionOut.print(resource(dir: 'images', file: 'vit_logo.png'))
 printHtmlPart(8)
+createClosureForHtmlPart(9, 2)
+invokeTag('button','g',77,['name':("submit"),'value':("call me"),'onclick':("callMe()")],2)
+printHtmlPart(10)
 })
 invokeTag('captureBody','sitemesh',1,[:],1)
-printHtmlPart(9)
+printHtmlPart(11)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1443072532000L
+public static final long LAST_MODIFIED = 1444752253426L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

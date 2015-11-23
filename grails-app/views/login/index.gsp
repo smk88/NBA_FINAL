@@ -40,7 +40,7 @@
 
                             <td>${fieldValue(bean: loginInstance, field: "pwd")}</td>
 
-                            <td>${fieldValue(bean: loginInstance, field: "usertype")}</td>
+                            <td>${fieldValue(bean: loginInstance, field: "user_type")}</td>
 
                         </tr>
                     </g:each>

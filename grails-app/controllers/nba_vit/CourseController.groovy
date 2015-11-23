@@ -101,4 +101,28 @@ class CourseController {
             '*'{ render status: NOT_FOUND }
         }
     }
+    /////////////////vikas
+    def viewCourse()
+    {
+        //render("to be done")
+        println("in view Course sessnion "+session)
+        println("in view Course sessnio "+session.courses.course_name)
+        List<List<String>> listOfLists = new ArrayList<List<String>>(session.courses.size()); 
+        
+        
+        for(int j=0;j<session.courses.size();j++){
+            listOfLists.add(new ArrayList<String>())
+            listOfLists[j].add(session.courses[j].course_code)
+            listOfLists[j].add(session.courses[j].course_name)
+            println("in loop:"+session.courses[j].course_code)
+            
+            def ct = InformationService.getCourseTypefromCourseCode(session.courses[j].course_code)
+            listOfLists[j].add(ct);
+            listOfLists[j].add(session.courses[j].year);
+          //  println("in loops "+val)
+            
+        }
+        [lol:listOfLists]
+        
+    }
 }

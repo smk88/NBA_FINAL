@@ -14,46 +14,44 @@ registerSitemeshPreprocessMode()
 printHtmlPart(0)
 createTagBody(1, {->
 printHtmlPart(1)
-createTagBody(2, {->
-createClosureForHtmlPart(2, 3)
-invokeTag('captureTitle','sitemesh',3,[:],3)
+invokeTag('captureMeta','sitemesh',3,['gsp_sm_xmlClosingForEmptyTag':("/"),'name':("layout"),'content':("nbalayout")],-1)
+printHtmlPart(2)
 })
-invokeTag('wrapTitleTag','sitemesh',3,[:],2)
+invokeTag('captureHead','sitemesh',4,[:],1)
 printHtmlPart(3)
-expressionOut.print(resource(dir: 'css', file: 'global.css'))
-printHtmlPart(4)
-})
-invokeTag('captureHead','sitemesh',5,[:],1)
-printHtmlPart(5)
 createTagBody(1, {->
+printHtmlPart(4)
+createTagBody(2, {->
+printHtmlPart(5)
+expressionOut.print(resource(dir: 'images', file: 'assign_coordinator.png'))
 printHtmlPart(6)
-expressionOut.print(resource(dir: 'images', file: 'vit_logo.png'))
+})
+invokeTag('link','g',9,['controller':("EmployeeHome"),'action':("assignCoordinator"),'<a href':("#")],2)
 printHtmlPart(7)
 createTagBody(2, {->
 printHtmlPart(8)
-expressionOut.print(resource(dir: 'images', file: 'assign_coordinator.png'))
+expressionOut.print(resource(dir: 'images', file: 'add_PO-PEO-GA.png'))
 printHtmlPart(9)
 })
-invokeTag('link','g',20,['controller':("EmployeeHome"),'action':("getCourses"),'<a href':("#")],2)
+invokeTag('link','g',10,['controller':("EmployeeHome"),'action':("create")],2)
 printHtmlPart(10)
-expressionOut.print(resource(dir: 'images', file: 'add_PO-PEO-GA.png'))
-printHtmlPart(11)
 expressionOut.print(resource(dir: 'images', file: 'mapping.png'))
-printHtmlPart(12)
+printHtmlPart(11)
 expressionOut.print(resource(dir: 'images', file: 'top.png'))
-printHtmlPart(13)
+printHtmlPart(12)
 expressionOut.print(resource(dir: 'images', file: 'student.png'))
+printHtmlPart(13)
+createTagBody(2, {->
 printHtmlPart(14)
 expressionOut.print(resource(dir: 'images', file: 'attain.png'))
 printHtmlPart(15)
-expressionOut.print(emp.name)
+})
+invokeTag('link','g',15,['controller':("EmployeeHome"),'action':("drawGraph"),'<a href':("#")],2)
 printHtmlPart(16)
-expressionOut.print(emp.email)
-printHtmlPart(16)
-expressionOut.print(emp.program)
+expressionOut.print(session.user)
 printHtmlPart(17)
 })
-invokeTag('captureBody','sitemesh',43,[:],1)
+invokeTag('captureBody','sitemesh',28,[:],1)
 printHtmlPart(18)
 }
 public static final Map JSP_TAGS = new HashMap()
@@ -61,7 +59,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1443085483710L
+public static final long LAST_MODIFIED = 1444385658000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

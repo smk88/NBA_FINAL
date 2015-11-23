@@ -54,15 +54,15 @@ printHtmlPart(11)
 printHtmlPart(12)
 invokeTag('sortableColumn','g',27,['property':("course_code"),'title':(message(code: 'course.course_code.label', default: 'Coursecode'))],-1)
 printHtmlPart(13)
-invokeTag('sortableColumn','g',29,['property':("course_credit"),'title':(message(code: 'course.course_credit.label', default: 'Coursecredit'))],-1)
-printHtmlPart(13)
-invokeTag('sortableColumn','g',31,['property':("course_name"),'title':(message(code: 'course.course_name.label', default: 'Coursename'))],-1)
+invokeTag('message','g',29,['code':("course.associated_course.label"),'default':("Associatedcourse")],-1)
 printHtmlPart(14)
-invokeTag('message','g',33,['code':("course.course_type.label"),'default':("Coursetype")],-1)
+invokeTag('message','g',31,['code':("course.courseCategory.label"),'default':("Course Category")],-1)
 printHtmlPart(15)
-invokeTag('message','g',35,['code':("course.employee.label"),'default':("Employee")],-1)
+invokeTag('sortableColumn','g',33,['property':("course_credit"),'title':(message(code: 'course.course_credit.label', default: 'Coursecredit'))],-1)
 printHtmlPart(16)
-invokeTag('sortableColumn','g',37,['property':("module"),'title':(message(code: 'course.module.label', default: 'Module'))],-1)
+invokeTag('sortableColumn','g',35,['property':("course_name"),'title':(message(code: 'course.course_name.label', default: 'Coursename'))],-1)
+printHtmlPart(13)
+invokeTag('message','g',37,['code':("course.course_type.label"),'default':("Coursetype")],-1)
 printHtmlPart(17)
 loop:{
 int i = 0
@@ -75,15 +75,15 @@ expressionOut.print(fieldValue(bean: courseInstance, field: "course_code"))
 })
 invokeTag('link','g',45,['action':("show"),'id':(courseInstance.id)],3)
 printHtmlPart(20)
+expressionOut.print(fieldValue(bean: courseInstance, field: "associated_course"))
+printHtmlPart(20)
+expressionOut.print(fieldValue(bean: courseInstance, field: "courseCategory"))
+printHtmlPart(20)
 expressionOut.print(fieldValue(bean: courseInstance, field: "course_credit"))
 printHtmlPart(20)
 expressionOut.print(fieldValue(bean: courseInstance, field: "course_name"))
 printHtmlPart(20)
 expressionOut.print(fieldValue(bean: courseInstance, field: "course_type"))
-printHtmlPart(20)
-expressionOut.print(fieldValue(bean: courseInstance, field: "employee"))
-printHtmlPart(20)
-expressionOut.print(fieldValue(bean: courseInstance, field: "module"))
 printHtmlPart(21)
 i++
 }
@@ -100,7 +100,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1443085787941L
+public static final long LAST_MODIFIED = 1444991472802L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

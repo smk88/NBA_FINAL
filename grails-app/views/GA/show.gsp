@@ -41,11 +41,38 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${GAInstance?.program}">
+				<g:if test="${GAInstance?.is_current}">
 				<li class="fieldcontain">
-					<span id="program-label" class="property-label"><g:message code="GA.program.label" default="Program" /></span>
+					<span id="is_current-label" class="property-label"><g:message code="GA.is_current.label" default="Iscurrent" /></span>
 					
-						<span class="property-value" aria-labelledby="program-label"><g:link controller="program" action="show" id="${GAInstance?.program?.id}">${GAInstance?.program?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="is_current-label"><g:formatBoolean boolean="${GAInstance?.is_current}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${GAInstance?.is_lock}">
+				<li class="fieldcontain">
+					<span id="is_lock-label" class="property-label"><g:message code="GA.is_lock.label" default="Islock" /></span>
+					
+						<span class="property-value" aria-labelledby="is_lock-label"><g:formatBoolean boolean="${GAInstance?.is_lock}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${GAInstance?.program_type}">
+				<li class="fieldcontain">
+					<span id="program_type-label" class="property-label"><g:message code="GA.program_type.label" default="Programtype" /></span>
+					
+						<span class="property-value" aria-labelledby="program_type-label"><g:link controller="programType" action="show" id="${GAInstance?.program_type?.id}">${GAInstance?.program_type?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${GAInstance?.revision_year}">
+				<li class="fieldcontain">
+					<span id="revision_year-label" class="property-label"><g:message code="GA.revision_year.label" default="Revisionyear" /></span>
+					
+						<span class="property-value" aria-labelledby="revision_year-label"><g:fieldValue bean="${GAInstance}" field="revision_year"/></span>
 					
 				</li>
 				</g:if>

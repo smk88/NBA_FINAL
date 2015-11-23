@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'CO.label', default: 'CO')}" />
-		<title><g:message code="default.create.label" args="[entityName]" /></title>
-	</head>
-	<body>
-		<a href="#create-CO" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
-		<div id="create-CO" class="content scaffold-create" role="main">
-			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<g:hasErrors bean="${COInstance}">
-			<ul class="errors" role="alert">
-				<g:eachError bean="${COInstance}" var="error">
-				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-				</g:eachError>
-			</ul>
-			</g:hasErrors>
-			<g:form url="[resource:COInstance, action:'save']" >
-				<fieldset class="form">
-					<g:render template="form"/>
-				</fieldset>
-				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-				</fieldset>
-			</g:form>
-		</div>
-	</body>
+    <head>
+        <meta name="layout" content="nbalayout">
+        <g:javascript library="jquery"/>
+        <g:set var="entityName" value="${message(code: 'CO.label', default: 'CO')}" />
+        <title><g:message code="default.create.label" args="[entityName]" /></title>
+    </head>
+    <body>
+    <body>
+        <div id = "container">
+            <a href="courseOwner.gsp"></a>
+            <div class = "sidebar">
+                <ul id = "sideBarList"> 
+                    <li> <g:link controller="EmployeeHome" action="createCo" update="newContent"> <img src = "${resource(dir: 'images', file: 'add_PO-PEO-GA.png')}">&nbsp;Create CO</g:link></li>
+                    <li> <g:link controller="EmployeeHome" action="selectCourse" <a href = "#"> <img src = "${resource(dir: 'images', file: 'mapping.png')}">&nbsp;Add CO-PO Map</a></g:link></li>
+                    <li> <a href = "/NBA_VIT/EmployeeHome/selectCourseEdit"> <img src = "${resource(dir: 'images', file: 'mapping.png')}">&nbsp;View/Edit CO-PO Map</a></li>
+                    <li> <g:link controller="CO" action="index1"> <img src = "${resource(dir: 'images', file: 'mapping.png')}">&nbsp;View/Edit CO</g:link></li>
+                    <li><li> <g:link controller="EmployeeHome" action="coAssesment" <a href = "#"> <img src = "${resource(dir: 'images', file: 'addMap.png')}">&nbsp;Map CO with Assesment..</a></g:link></li>
+                    <li> <a href = "/NBA_VIT/EmployeeHome/viewCourse"> <img src = "${resource(dir: 'images', file: 'course.png')}">&nbsp;View Courses</a></li>
+                    <li> <a href = "#"> <img src = "${resource(dir: 'images', file: 'report.png')}">&nbsp;Report Mappings</a></li>
+                    <li> <a href = "#"> <img src = "${resource(dir: 'images', file: 'top.png')}">&nbsp;View CO attainment of Course</a></li>
+
+                </ul>
+            </div>
+
+            <div class = "content">
+                <g:form url="[resource:COInstance, controller:'CO', action:'save1']" >
+                    <g:hiddenField name="version" value="${COInstance?.version}" />
+                    <div class="w3-card-2" style="width:90%; margin-top: 5%; margin-left: 2%">
+                       
+                            <div class="w3-blue-grey col-lg-12" style="font-size: 1.2em; text-align: center">Create CO&nbsp;[${session.course}:${session.course.course_name}]</div>
+                        
+                        <g:render template="form_create"/>
+
+                      
+                        <g:actionSubmit  class="w3-btn w3-blue-grey btn-lg active " action="save1" value="${message(code: 'default.button.save.label', default: 'Save')}" />
+                    </div>
+                </g:form>
+                <div id="co_code_div" >
+                </div>
+            </div></div>
+
+    </body>
 </html>

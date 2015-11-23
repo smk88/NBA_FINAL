@@ -73,14 +73,14 @@ invokeTag('fieldValue','g',39,['bean':(loginInstance),'field':("pwd")],-1)
 printHtmlPart(16)
 }
 printHtmlPart(17)
-if(true && (loginInstance?.usertype)) {
+if(true && (loginInstance?.user_type)) {
 printHtmlPart(20)
-invokeTag('message','g',46,['code':("login.usertype.label"),'default':("Usertype")],-1)
+invokeTag('message','g',46,['code':("login.user_type.label"),'default':("Usertype")],-1)
 printHtmlPart(21)
 createTagBody(3, {->
-expressionOut.print(loginInstance?.usertype?.encodeAsHTML())
+expressionOut.print(loginInstance?.user_type?.encodeAsHTML())
 })
-invokeTag('link','g',48,['controller':("userType"),'action':("show"),'id':(loginInstance?.usertype?.id)],3)
+invokeTag('link','g',48,['controller':("userType"),'action':("show"),'id':(loginInstance?.user_type?.id)],3)
 printHtmlPart(16)
 }
 printHtmlPart(22)
@@ -96,27 +96,16 @@ printHtmlPart(25)
 })
 invokeTag('form','g',59,['url':([resource:loginInstance, action:'delete']),'method':("DELETE")],2)
 printHtmlPart(26)
-createTagBody(2, {->
-printHtmlPart(27)
-invokeTag('textField','g',63,['name':("username"),'value':("")],-1)
-printHtmlPart(27)
-invokeTag('passwordField','g',64,['name':("pwd"),'value':("")],-1)
-printHtmlPart(27)
-invokeTag('actionSubmit','g',65,['value':("Login")],-1)
-printHtmlPart(2)
 })
-invokeTag('form','g',66,['controller':("Login"),'action':("authenticate"),'method':("POST")],2)
-printHtmlPart(3)
-})
-invokeTag('captureBody','sitemesh',67,[:],1)
-printHtmlPart(28)
+invokeTag('captureBody','sitemesh',61,[:],1)
+printHtmlPart(27)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1442317936000L
+public static final long LAST_MODIFIED = 1443880612000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

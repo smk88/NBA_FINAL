@@ -20,10 +20,6 @@ class GAController {
     }
 
     def create() {
-        println("GA Controller create")
-        Employee emp = Employee.findByEmployee_code(session.user)
-        session.program = emp.program
-        println(session)
         respond new GA(params)
     }
 

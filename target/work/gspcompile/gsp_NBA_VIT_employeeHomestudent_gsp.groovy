@@ -14,37 +14,29 @@ registerSitemeshPreprocessMode()
 printHtmlPart(0)
 createTagBody(1, {->
 printHtmlPart(1)
-createTagBody(2, {->
-createClosureForHtmlPart(2, 3)
-invokeTag('captureTitle','sitemesh',3,[:],3)
+invokeTag('captureMeta','sitemesh',3,['gsp_sm_xmlClosingForEmptyTag':("/"),'name':("layout"),'content':("nbalayout")],-1)
+printHtmlPart(2)
 })
-invokeTag('wrapTitleTag','sitemesh',3,[:],2)
+invokeTag('captureHead','sitemesh',4,[:],1)
 printHtmlPart(3)
-expressionOut.print(resource(dir: 'css', file: 'global.css'))
-printHtmlPart(4)
-})
-invokeTag('captureHead','sitemesh',5,[:],1)
-printHtmlPart(5)
 createTagBody(1, {->
-printHtmlPart(6)
-expressionOut.print(resource(dir: 'images', file: 'vit_logo.png'))
-printHtmlPart(7)
+printHtmlPart(4)
 expressionOut.print(resource(dir: 'images', file: 'top.png'))
-printHtmlPart(8)
+printHtmlPart(5)
 expressionOut.print(resource(dir: 'images', file: 'apply.png'))
-printHtmlPart(9)
+printHtmlPart(6)
 expressionOut.print(resource(dir: 'images', file: 'resetpasswd.png'))
-printHtmlPart(10)
+printHtmlPart(7)
 })
-invokeTag('captureBody','sitemesh',37,[:],1)
-printHtmlPart(11)
+invokeTag('captureBody','sitemesh',26,[:],1)
+printHtmlPart(8)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1443066730000L
+public static final long LAST_MODIFIED = 1444385878000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

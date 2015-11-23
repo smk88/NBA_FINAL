@@ -1,14 +1,10 @@
 package nba_vit
 
 class CourseOffering {
+    static belongsTo=[course:Course]
     String acadamic_year
     String semester
-    static belongsTo=[course:Course]
-     
-    String toString()
-    {
-        "course : "+course+"  sem : "+sem+" AY : "+academic_year
-    }
+    String module   
     static constraints = {
         
     }

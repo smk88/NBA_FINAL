@@ -57,44 +57,79 @@ expressionOut.print(flash.message)
 printHtmlPart(12)
 }
 printHtmlPart(13)
-if(true && (POInstance?.poStatement)) {
+if(true && (POInstance?.po_code)) {
 printHtmlPart(14)
-invokeTag('message','g',28,['code':("PO.poStatement.label"),'default':("Po Statement")],-1)
+invokeTag('message','g',28,['code':("PO.po_code.label"),'default':("Pocode")],-1)
 printHtmlPart(15)
-invokeTag('fieldValue','g',30,['bean':(POInstance),'field':("poStatement")],-1)
+invokeTag('fieldValue','g',30,['bean':(POInstance),'field':("po_code")],-1)
 printHtmlPart(16)
 }
 printHtmlPart(17)
-if(true && (POInstance?.poCode)) {
+if(true && (POInstance?.is_current)) {
 printHtmlPart(18)
-invokeTag('message','g',37,['code':("PO.poCode.label"),'default':("Po Code")],-1)
+invokeTag('message','g',37,['code':("PO.is_current.label"),'default':("Iscurrent")],-1)
 printHtmlPart(19)
-invokeTag('fieldValue','g',39,['bean':(POInstance),'field':("poCode")],-1)
+invokeTag('formatBoolean','g',39,['boolean':(POInstance?.is_current)],-1)
 printHtmlPart(16)
 }
+printHtmlPart(17)
+if(true && (POInstance?.is_lock)) {
 printHtmlPart(20)
-createTagBody(2, {->
+invokeTag('message','g',46,['code':("PO.is_lock.label"),'default':("Islock")],-1)
 printHtmlPart(21)
-createTagBody(3, {->
-invokeTag('message','g',47,['code':("default.button.edit.label"),'default':("Edit")],-1)
-})
-invokeTag('link','g',47,['class':("edit"),'action':("edit"),'resource':(POInstance)],3)
+invokeTag('formatBoolean','g',48,['boolean':(POInstance?.is_lock)],-1)
+printHtmlPart(16)
+}
+printHtmlPart(17)
+if(true && (POInstance?.po_statement)) {
 printHtmlPart(22)
-invokeTag('actionSubmit','g',48,['class':("delete"),'action':("delete"),'value':(message(code: 'default.button.delete.label', default: 'Delete')),'onclick':("return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');")],-1)
+invokeTag('message','g',55,['code':("PO.po_statement.label"),'default':("Postatement")],-1)
 printHtmlPart(23)
-})
-invokeTag('form','g',50,['url':([resource:POInstance, action:'delete']),'method':("DELETE")],2)
+invokeTag('fieldValue','g',57,['bean':(POInstance),'field':("po_statement")],-1)
+printHtmlPart(16)
+}
+printHtmlPart(17)
+if(true && (POInstance?.program)) {
 printHtmlPart(24)
-})
-invokeTag('captureBody','sitemesh',52,[:],1)
+invokeTag('message','g',64,['code':("PO.program.label"),'default':("Program")],-1)
 printHtmlPart(25)
+createTagBody(3, {->
+expressionOut.print(POInstance?.program?.encodeAsHTML())
+})
+invokeTag('link','g',66,['controller':("program"),'action':("show"),'id':(POInstance?.program?.id)],3)
+printHtmlPart(16)
+}
+printHtmlPart(17)
+if(true && (POInstance?.revision_year)) {
+printHtmlPart(26)
+invokeTag('message','g',73,['code':("PO.revision_year.label"),'default':("Revisionyear")],-1)
+printHtmlPart(27)
+invokeTag('fieldValue','g',75,['bean':(POInstance),'field':("revision_year")],-1)
+printHtmlPart(16)
+}
+printHtmlPart(28)
+createTagBody(2, {->
+printHtmlPart(29)
+createTagBody(3, {->
+invokeTag('message','g',83,['code':("default.button.edit.label"),'default':("Edit")],-1)
+})
+invokeTag('link','g',83,['class':("edit"),'action':("edit"),'resource':(POInstance)],3)
+printHtmlPart(30)
+invokeTag('actionSubmit','g',84,['class':("delete"),'action':("delete"),'value':(message(code: 'default.button.delete.label', default: 'Delete')),'onclick':("return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');")],-1)
+printHtmlPart(31)
+})
+invokeTag('form','g',86,['url':([resource:POInstance, action:'delete']),'method':("DELETE")],2)
+printHtmlPart(32)
+})
+invokeTag('captureBody','sitemesh',88,[:],1)
+printHtmlPart(33)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1442294238000L
+public static final long LAST_MODIFIED = 1444404972880L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

@@ -1,6 +1,6 @@
 <html>
     <head>
-    <style type="text/css">
+        <style type="text/css">
             #ss1
             {
             font-size:0.6em;
@@ -18,7 +18,7 @@
             height: 25px;
             width: 25px;
             }
-            
+
             .SettingImage2{
             max-height: 20px;
             max-width: 20px;
@@ -27,12 +27,12 @@
             }
 
             .SettingText {
-            
+
             color: white;
             font-size: 60%;
             }
-            
-             .SettingText2 {
+
+            .SettingText2 {
             margin: 0 0 10px 10px;
             color: white;
             font-size: 45%;
@@ -47,7 +47,7 @@
 
             .button:hover {
             background-color: #6AA4D4;
-            
+
             }
 
             .button a:hover {
@@ -65,16 +65,16 @@
             }
 
             .button:hover ~ #ss2{ padding-right: 0%;}
-            
-            
+
+
             .button:hover ul{
             display : block; 
             }
-            
-             .button ul li:hover{
+
+            .button ul li:hover{
             background-color: #71A0C7; 
             }
-            
+
             ul#SettingLI li a:hover{
             color: white; 
             }
@@ -84,6 +84,7 @@
         <link rel = "stylesheet" type = "script/js" href="${resource(dir: 'js', file: 'jquery.min.js')}">
         <link rel = "stylesheet" type = "script/js" href="${resource(dir: 'js', file: 'bootstrap.min.js')}">
         <link rel = "stylesheet" type = "text/css" href="${resource(dir: 'css', file: 'global.css')}">
+        <link rel = "stylesheet" type = "text/css" href="${resource(dir: 'css', file: 'w3.css')}">
     </head>
 
     <body>
@@ -94,11 +95,11 @@
                 <a href="#">
                     <img class ="SettingImage" src = "${resource(dir: 'images', file: 'user168.png')}" alt="vitlogo" >
                     <span class = "SettingText">Hello,&nbsp;${session.user}</span>
-                    
+
                 </a>
 
                 <ul id = "SettingLI">
-                    
+
                 </ul>
             </div>							
             <p> Vishwakarma Institute Of Technology, Pune </br><small id ="header1">NBA Software</small></p>
@@ -112,21 +113,32 @@
             <div class = "sidebar">
                 <ul id = "sideBarList"> 
 
-                    
+
                 </ul>
             </div>
 
             <div class = "content">
-                <g:form class="form-horizontal text-justify" role="form" url="[action:'resetpassword',controller:'Login']">
-         <!-- <form name="changepassword" action="xyz" method="POST"> -->           
-            New Password:<g:textField name="newpwd" value="" />
-            </br></br>
-            Confirm Password:<g:textField name="confpwd" value="" />
-            </br></br>
-           <!-- <input type="submit" value="change" />  -->
-            <g:submitButton name="Change" <a class="btn btn-info btn-md" ></a> </g:submitButton>
-        </g:form>
-				
+          
+                <div  class="w3-card-24">
+                    <div class="w3-blue-grey">
+                        <h2>Reset Password</h2>
+                    </div>
+                    <g:form class="w3-form" url="[action:'resetpassword',controller:'Login']">
+                        <div class="w3-input-group">      
+                            <label class="w3-label w3-text-brown"><b>New Password:</b></label>
+                            <g:textField class="w3-input w3-border w3-sand" name="newpwd" value="" />
+                        </div>
+                        <div class="w3-input-group">      
+                            <label class="w3-label w3-text-brown"><b>Confirm Password:</b></label>
+                            <g:textField  class="w3-input w3-border w3-sand" name="confpwd"  value=""/>
+                        </div>
+                        <g:submitButton name="Change" <a class="w3-btn w3-blue-grey" ></a> </g:submitButton>
+
+                    </g:form>
+                </div>
+
+
+
             </div>
         </div> 
 

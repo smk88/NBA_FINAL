@@ -9,6 +9,12 @@
 <html>
     <title>VIT NBA Software </title> 
     <head>
+        <script type="javascript">
+            function callMe()
+            {
+                alert("Calling controller")
+            }
+        </script>
     <style type="text/css">
      #ss
      {
@@ -61,16 +67,20 @@
       </tr>
       <tr>
         <td> </td>
-        <td> <a class="btn btn-info btn-md">Sign in</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/NBA_VIT/login/forgotpassword" class="btn btn-info btn-md" value="ForgotPassword">Forgot Password</a></td>       
+        <td> <a class="btn w3-btn w3-blue-grey btn-lg active">Sign in</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/NBA_VIT/login/forgotpassword" class="btn btn-info btn-md" value="ForgotPassword">Forgot Password</a></td>       
+        
       </tr>
     </tbody>
   </table>
-                    
+             <br>
+             
+           <g:button class="btn w3-btn w3-blue-grey btn-lg active" name="submit" value="call me" onclick="callMe()">Click me </g:button>
             </form>	
 			</div>
                        <div id = "footer" >
 				<div class = "logo"> 
 					<a href = "#"> <small>@Credits NBA Software Team</small></a>
+                                       
 				</div> 
 			</div>   
 

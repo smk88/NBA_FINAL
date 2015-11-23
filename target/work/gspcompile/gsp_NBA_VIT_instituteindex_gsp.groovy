@@ -52,17 +52,17 @@ expressionOut.print(flash.message)
 printHtmlPart(11)
 }
 printHtmlPart(12)
-invokeTag('sortableColumn','g',27,['property':("name"),'title':(message(code: 'institute.name.label', default: 'Name'))],-1)
+invokeTag('sortableColumn','g',27,['property':("address"),'title':(message(code: 'institute.address.label', default: 'Address'))],-1)
 printHtmlPart(13)
-invokeTag('sortableColumn','g',29,['property':("address"),'title':(message(code: 'institute.address.label', default: 'Address'))],-1)
+invokeTag('sortableColumn','g',29,['property':("establishment_date"),'title':(message(code: 'institute.establishment_date.label', default: 'Establishmentdate'))],-1)
 printHtmlPart(13)
-invokeTag('sortableColumn','g',31,['property':("establishmentDate"),'title':(message(code: 'institute.establishmentDate.label', default: 'Establishment Date'))],-1)
+invokeTag('sortableColumn','g',31,['property':("mission"),'title':(message(code: 'institute.mission.label', default: 'Mission'))],-1)
 printHtmlPart(13)
-invokeTag('sortableColumn','g',33,['property':("vision"),'title':(message(code: 'institute.vision.label', default: 'Vision'))],-1)
+invokeTag('sortableColumn','g',33,['property':("name"),'title':(message(code: 'institute.name.label', default: 'Name'))],-1)
 printHtmlPart(13)
-invokeTag('sortableColumn','g',35,['property':("mission"),'title':(message(code: 'institute.mission.label', default: 'Mission'))],-1)
+invokeTag('sortableColumn','g',35,['property':("vision"),'title':(message(code: 'institute.vision.label', default: 'Vision'))],-1)
 printHtmlPart(13)
-invokeTag('sortableColumn','g',37,['property':("vmCreatedDate"),'title':(message(code: 'institute.vmCreatedDate.label', default: 'Vm Created Date'))],-1)
+invokeTag('sortableColumn','g',37,['property':("vm_created_date"),'title':(message(code: 'institute.vm_created_date.label', default: 'Vmcreateddate'))],-1)
 printHtmlPart(14)
 loop:{
 int i = 0
@@ -71,19 +71,19 @@ printHtmlPart(15)
 expressionOut.print((i % 2) == 0 ? 'even' : 'odd')
 printHtmlPart(16)
 createTagBody(3, {->
-expressionOut.print(fieldValue(bean: instituteInstance, field: "name"))
+expressionOut.print(fieldValue(bean: instituteInstance, field: "address"))
 })
 invokeTag('link','g',45,['action':("show"),'id':(instituteInstance.id)],3)
 printHtmlPart(17)
-expressionOut.print(fieldValue(bean: instituteInstance, field: "address"))
-printHtmlPart(17)
-invokeTag('formatDate','g',49,['date':(instituteInstance.establishmentDate)],-1)
-printHtmlPart(17)
-expressionOut.print(fieldValue(bean: instituteInstance, field: "vision"))
+invokeTag('formatDate','g',47,['date':(instituteInstance.establishment_date)],-1)
 printHtmlPart(17)
 expressionOut.print(fieldValue(bean: instituteInstance, field: "mission"))
 printHtmlPart(17)
-invokeTag('formatDate','g',55,['date':(instituteInstance.vmCreatedDate)],-1)
+expressionOut.print(fieldValue(bean: instituteInstance, field: "name"))
+printHtmlPart(17)
+expressionOut.print(fieldValue(bean: instituteInstance, field: "vision"))
+printHtmlPart(17)
+invokeTag('formatDate','g',55,['date':(instituteInstance.vm_created_date)],-1)
 printHtmlPart(18)
 i++
 }
@@ -100,7 +100,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1442294238000L
+public static final long LAST_MODIFIED = 1444132696000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

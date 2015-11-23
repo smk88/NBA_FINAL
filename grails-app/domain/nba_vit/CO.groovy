@@ -10,7 +10,7 @@ class CO {
           
     
     String toString(){
-        co_statement
+        co_code
     }
     
     static constraints = {

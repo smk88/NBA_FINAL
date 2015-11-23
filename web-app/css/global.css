@@ -1,168 +1,171 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800");
+
 *{
-	margin:0;
-	padding:0;
-	box-sizing : border-box;
+    margin:0;
+    padding:0;
+    box-sizing : border-box;
 }
 
 body{
-	font-family : 'Open Sans';
+    font-family : 'Open Sans';
 }
 
 div#header{
-	/*width : 100%;
-	height : 100px;
-	background-color : #212529; 
-	margin : 0 auto; 
-	/*border: 2px solid #000000;    Border for the header*/
-	background-color:#3498db;
+
+    background-color: #34495E;
     font-family: "Times New Roman", Georgia, Serif;
     text-align: center;
     color:#FFFFFF;
     border:2px solid #FFFFFF;;
     width:100%;
-    height:120px;
-    padding:10px 10px;
-    padding-right: 25px;
-    font-size:30px;
+    height:18.50%;
+    padding: 5px 10px;
+    
+    font-size: 2em;
     font-weight:600;
     margin-right:10px;                           
-            }
+}
 div#header1{font-size:20px;}
 
- #vitlogo
- {
-     border:1px solid bisque;
-     background-color: #ecf0f1;
-     border-radius:10px;
-     float: left;
-     max-height: 95px;
-     max-width: 75px;
-     height: 95px;
-     width: 75px;
-     
-            }
- 					   
+#vitlogo
+{
+    border:1px solid bisque;
+    background-color: #ecf0f1;
+    border-radius:10px;
+    float: left;
+    max-height: 100%;
+    max-width: 20%
+}
+
 div#footer{
-	width : 100%;
-	height : 7.5%; 
-	background-color : #3498db; 
-	color:#FFFFFF;
-	font-size:0.70em;
-	
+    width : 100%;
+    height : 7.5%; 
+    background-color : #34495E; 
+    color:#FFFFFF;
+    font-size:0.70em;
+
 }
 
 a{
-	text-decoration : none; 
+    text-decoration : none; 
 }
 
 .logo a{
-	color : white; 
+    color : white; 
 }
 
 .logo{
-	float : left; 
-	margin-top : 15px; 
-	margin-left : 10px;
-	font-size : 1.6em; 
+    float : left; 
+    margin-top : 15px; 
+    margin-left : 10px;
+    font-size : 1.6em; 
 }
 
 .logo a span{
-	font-weight : 600; 
-	
+    font-weight : 600; 
+
 }
 
 .logo a span p{
-	font-weight : 400; 
-	font-size : .8em; 
+    font-weight : 400; 
+    font-size : .8em; 
 }
 
 div#container{
-	width: 100%; 
-	margin : 0 auto; 
+    width: 100%; 
+    margin : 0 auto; 
 }
 
 div#containerBand{
-	width: 100%; 
-	margin : 0 auto; 
-	height : 80px;
-	background-color : #ecf0f1; 
+    width: 100%; 
+    margin : 0 auto; 
+    height : 80px;
+    background-color : #ecf0f1; 
 }
 
 .sidebar {
-	width : 250px; 
-	padding : 0px; 
-	height : 79.7%;
-	background-color : #51BBE8; 
-	float : left; 
-	color : white; 
+    width : 18.60%; 
+    padding : 0px; 
+    height : 79.7%;
+    background-color : #6C7A89; 
+    float : left; 
+    color : white; 
+    overflow-y:scroll;
+
 }
 
 .content{
-	width : auto; 
-	margin-left : 250px; 
-	height : 80%; 
-	background-color : #ecf0f1; 
-	padding : 15px;   /* padding for the content */ 
+    width : auto; 
+    margin-left : 18%; 
+    height : 80%; 
+    background-color : #ecf0f1; 
+    padding : 15px;   /* padding for the content */ 
+}
+
+.content1{
+    width : auto; 
+    margin-left :0px; 
+    height : 80%; 
+    background-color : #ecf0f1; 
+    padding : 15px;   /* padding for the content */ 
 }
 
 .homeContent{
-	width : auto; 
-        margin-right : 300px; 
-	margin-left : 300px;
-       
-	height : 74%; 
-	background-color : #ecf0f1; 
-	padding : 15px;   /* padding for the content */ 
+    width : auto; 
+    margin-right : 25%; 
+    margin-left : 25%;
+
+    height : 74%; 
+    background-color : #ecf0f1; 
+    padding : 15px;   /* padding for the content */ 
 }
 
 ul#sideBarList{
-	
+
 }
 
 ul#sideBarList li{
-	list-style : none; 
-	
+    list-style : none; 
+
 }
 
 ul#sideBarList li a {
-	color  : #ccc; 
-	display : block; 
-	padding : 15px; 
-	font-size : .8em; 
-	color : white; 
-	/* border: 1px solid #35383B; */
-	-webkit-transition : 0.2s; 
-	-moz-transition : 0.2s; 
-	-o-transition : 0.2s; 
-	transition : 0.2s; 
-	/* text-align: center; */
+    color  : #ccc; 
+    display : block; 
+    padding : 15px; 
+    font-size : .85em; 
+    color : white; 
+    /* border: 1px solid #35383B; */
+    -webkit-transition : 0.2s; 
+    -moz-transition : 0.2s; 
+    -o-transition : 0.2s; 
+    transition : 0.2s; 
+    /* text-align: center; */
 }
 
 ul#sideBarList li a img{
-	max-height: 23px;
-	max-width: 23px;
-	width: 23px;
-	height: 23px;
+    max-height: 23px;
+    max-width: 23px;
+    width: 23px;
+    height: 23px;
 }
 
 ul#sideBarList li h3 {
-	color  : #ccc; 
-	display : block; 
-	padding : 5px; 
-	margin-left : 25px; 
-	color : white; 
-	
+    color  : #ccc; 
+    display : block; 
+    padding : 5px; 
+    margin-left : 25px; 
+    color : white; 
+
 }
 
 ul#sideBarList li a:hover{
-	background-color : #248AB5;
-	color: #fff; 
-	padding-left : 30px; 
+    background-color : #ABB7B7;
+    color: #fff; 
+    padding-left : 30px; 
 }
 
 /* ul#sideBarList li a:selected{
-	background-color : #fff;
-	color: #fff; 
-	padding-left : 30px; 
+        background-color : #fff;
+        color: #fff; 
+        padding-left : 30px; 
 } */

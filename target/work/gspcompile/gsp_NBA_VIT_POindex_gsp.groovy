@@ -52,39 +52,55 @@ expressionOut.print(flash.message)
 printHtmlPart(11)
 }
 printHtmlPart(12)
-invokeTag('sortableColumn','g',27,['property':("poStatement"),'title':(message(code: 'PO.poStatement.label', default: 'Po Statement'))],-1)
+invokeTag('sortableColumn','g',27,['property':("po_code"),'title':(message(code: 'PO.po_code.label', default: 'Pocode'))],-1)
 printHtmlPart(13)
-invokeTag('sortableColumn','g',29,['property':("poCode"),'title':(message(code: 'PO.poCode.label', default: 'Po Code'))],-1)
+invokeTag('sortableColumn','g',29,['property':("is_current"),'title':(message(code: 'PO.is_current.label', default: 'Iscurrent'))],-1)
+printHtmlPart(13)
+invokeTag('sortableColumn','g',31,['property':("is_lock"),'title':(message(code: 'PO.is_lock.label', default: 'Islock'))],-1)
+printHtmlPart(13)
+invokeTag('sortableColumn','g',33,['property':("po_statement"),'title':(message(code: 'PO.po_statement.label', default: 'Postatement'))],-1)
 printHtmlPart(14)
+invokeTag('message','g',35,['code':("PO.program.label"),'default':("Program")],-1)
+printHtmlPart(15)
+invokeTag('sortableColumn','g',37,['property':("revision_year"),'title':(message(code: 'PO.revision_year.label', default: 'Revisionyear'))],-1)
+printHtmlPart(16)
 loop:{
 int i = 0
 for( POInstance in (POInstanceList) ) {
-printHtmlPart(15)
-expressionOut.print((i % 2) == 0 ? 'even' : 'odd')
-printHtmlPart(16)
-createTagBody(3, {->
-expressionOut.print(fieldValue(bean: POInstance, field: "poStatement"))
-})
-invokeTag('link','g',37,['action':("show"),'id':(POInstance.id)],3)
 printHtmlPart(17)
-expressionOut.print(fieldValue(bean: POInstance, field: "poCode"))
+expressionOut.print((i % 2) == 0 ? 'even' : 'odd')
 printHtmlPart(18)
+createTagBody(3, {->
+expressionOut.print(fieldValue(bean: POInstance, field: "po_code"))
+})
+invokeTag('link','g',45,['action':("show"),'id':(POInstance.id)],3)
+printHtmlPart(19)
+invokeTag('formatBoolean','g',47,['boolean':(POInstance.is_current)],-1)
+printHtmlPart(19)
+invokeTag('formatBoolean','g',49,['boolean':(POInstance.is_lock)],-1)
+printHtmlPart(19)
+expressionOut.print(fieldValue(bean: POInstance, field: "po_statement"))
+printHtmlPart(19)
+expressionOut.print(fieldValue(bean: POInstance, field: "program"))
+printHtmlPart(19)
+expressionOut.print(fieldValue(bean: POInstance, field: "revision_year"))
+printHtmlPart(20)
 i++
 }
 }
-printHtmlPart(19)
-invokeTag('paginate','g',46,['total':(POInstanceCount ?: 0)],-1)
-printHtmlPart(20)
-})
-invokeTag('captureBody','sitemesh',49,[:],1)
 printHtmlPart(21)
+invokeTag('paginate','g',62,['total':(POInstanceCount ?: 0)],-1)
+printHtmlPart(22)
+})
+invokeTag('captureBody','sitemesh',65,[:],1)
+printHtmlPart(23)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1442294238000L
+public static final long LAST_MODIFIED = 1444404972761L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

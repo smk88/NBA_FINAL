@@ -57,44 +57,55 @@ expressionOut.print(flash.message)
 printHtmlPart(12)
 }
 printHtmlPart(13)
-if(true && (GAInstance?.gaStatement)) {
+if(true && (GAInstance?.ga_code)) {
 printHtmlPart(14)
-invokeTag('message','g',28,['code':("GA.gaStatement.label"),'default':("Ga Statement")],-1)
+invokeTag('message','g',28,['code':("GA.ga_code.label"),'default':("Gacode")],-1)
 printHtmlPart(15)
-invokeTag('fieldValue','g',30,['bean':(GAInstance),'field':("gaStatement")],-1)
+invokeTag('fieldValue','g',30,['bean':(GAInstance),'field':("ga_code")],-1)
 printHtmlPart(16)
 }
 printHtmlPart(17)
-if(true && (GAInstance?.gaCode)) {
+if(true && (GAInstance?.ga_statement)) {
 printHtmlPart(18)
-invokeTag('message','g',37,['code':("GA.gaCode.label"),'default':("Ga Code")],-1)
+invokeTag('message','g',37,['code':("GA.ga_statement.label"),'default':("Gastatement")],-1)
 printHtmlPart(19)
-invokeTag('fieldValue','g',39,['bean':(GAInstance),'field':("gaCode")],-1)
+invokeTag('fieldValue','g',39,['bean':(GAInstance),'field':("ga_statement")],-1)
 printHtmlPart(16)
 }
+printHtmlPart(17)
+if(true && (GAInstance?.program)) {
 printHtmlPart(20)
-createTagBody(2, {->
+invokeTag('message','g',46,['code':("GA.program.label"),'default':("Program")],-1)
 printHtmlPart(21)
 createTagBody(3, {->
-invokeTag('message','g',47,['code':("default.button.edit.label"),'default':("Edit")],-1)
+expressionOut.print(GAInstance?.program?.encodeAsHTML())
 })
-invokeTag('link','g',47,['class':("edit"),'action':("edit"),'resource':(GAInstance)],3)
+invokeTag('link','g',48,['controller':("program"),'action':("show"),'id':(GAInstance?.program?.id)],3)
+printHtmlPart(16)
+}
 printHtmlPart(22)
-invokeTag('actionSubmit','g',48,['class':("delete"),'action':("delete"),'value':(message(code: 'default.button.delete.label', default: 'Delete')),'onclick':("return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');")],-1)
+createTagBody(2, {->
 printHtmlPart(23)
+createTagBody(3, {->
+invokeTag('message','g',56,['code':("default.button.edit.label"),'default':("Edit")],-1)
 })
-invokeTag('form','g',50,['url':([resource:GAInstance, action:'delete']),'method':("DELETE")],2)
+invokeTag('link','g',56,['class':("edit"),'action':("edit"),'resource':(GAInstance)],3)
 printHtmlPart(24)
-})
-invokeTag('captureBody','sitemesh',52,[:],1)
+invokeTag('actionSubmit','g',57,['class':("delete"),'action':("delete"),'value':(message(code: 'default.button.delete.label', default: 'Delete')),'onclick':("return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');")],-1)
 printHtmlPart(25)
+})
+invokeTag('form','g',59,['url':([resource:GAInstance, action:'delete']),'method':("DELETE")],2)
+printHtmlPart(26)
+})
+invokeTag('captureBody','sitemesh',61,[:],1)
+printHtmlPart(27)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1442294238000L
+public static final long LAST_MODIFIED = 1443185536000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

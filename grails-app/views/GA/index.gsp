@@ -28,7 +28,13 @@
 					
 						<g:sortableColumn property="ga_statement" title="${message(code: 'GA.ga_statement.label', default: 'Gastatement')}" />
 					
-						<th><g:message code="GA.program.label" default="Program" /></th>
+						<g:sortableColumn property="is_current" title="${message(code: 'GA.is_current.label', default: 'Iscurrent')}" />
+					
+						<g:sortableColumn property="is_lock" title="${message(code: 'GA.is_lock.label', default: 'Islock')}" />
+					
+						<th><g:message code="GA.program_type.label" default="Programtype" /></th>
+					
+						<g:sortableColumn property="revision_year" title="${message(code: 'GA.revision_year.label', default: 'Revisionyear')}" />
 					
 					</tr>
 				</thead>
@@ -40,7 +46,13 @@
 					
 						<td>${fieldValue(bean: GAInstance, field: "ga_statement")}</td>
 					
-						<td>${fieldValue(bean: GAInstance, field: "program")}</td>
+						<td><g:formatBoolean boolean="${GAInstance.is_current}" /></td>
+					
+						<td><g:formatBoolean boolean="${GAInstance.is_lock}" /></td>
+					
+						<td>${fieldValue(bean: GAInstance, field: "program_type")}</td>
+					
+						<td>${fieldValue(bean: GAInstance, field: "revision_year")}</td>
 					
 					</tr>
 				</g:each>

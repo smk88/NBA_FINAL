@@ -57,51 +57,51 @@ expressionOut.print(flash.message)
 printHtmlPart(12)
 }
 printHtmlPart(13)
-if(true && (instituteInstance?.name)) {
-printHtmlPart(14)
-invokeTag('message','g',28,['code':("institute.name.label"),'default':("Name")],-1)
-printHtmlPart(15)
-invokeTag('fieldValue','g',30,['bean':(instituteInstance),'field':("name")],-1)
-printHtmlPart(16)
-}
-printHtmlPart(17)
 if(true && (instituteInstance?.address)) {
+printHtmlPart(14)
+invokeTag('message','g',28,['code':("institute.address.label"),'default':("Address")],-1)
+printHtmlPart(15)
+invokeTag('fieldValue','g',30,['bean':(instituteInstance),'field':("address")],-1)
+printHtmlPart(16)
+}
+printHtmlPart(17)
+if(true && (instituteInstance?.establishment_date)) {
 printHtmlPart(18)
-invokeTag('message','g',37,['code':("institute.address.label"),'default':("Address")],-1)
+invokeTag('message','g',37,['code':("institute.establishment_date.label"),'default':("Establishmentdate")],-1)
 printHtmlPart(19)
-invokeTag('fieldValue','g',39,['bean':(instituteInstance),'field':("address")],-1)
-printHtmlPart(16)
-}
-printHtmlPart(17)
-if(true && (instituteInstance?.establishmentDate)) {
-printHtmlPart(20)
-invokeTag('message','g',46,['code':("institute.establishmentDate.label"),'default':("Establishment Date")],-1)
-printHtmlPart(21)
-invokeTag('formatDate','g',48,['date':(instituteInstance?.establishmentDate)],-1)
-printHtmlPart(16)
-}
-printHtmlPart(17)
-if(true && (instituteInstance?.vision)) {
-printHtmlPart(22)
-invokeTag('message','g',55,['code':("institute.vision.label"),'default':("Vision")],-1)
-printHtmlPart(23)
-invokeTag('fieldValue','g',57,['bean':(instituteInstance),'field':("vision")],-1)
+invokeTag('formatDate','g',39,['date':(instituteInstance?.establishment_date)],-1)
 printHtmlPart(16)
 }
 printHtmlPart(17)
 if(true && (instituteInstance?.mission)) {
-printHtmlPart(24)
-invokeTag('message','g',64,['code':("institute.mission.label"),'default':("Mission")],-1)
-printHtmlPart(25)
-invokeTag('fieldValue','g',66,['bean':(instituteInstance),'field':("mission")],-1)
+printHtmlPart(20)
+invokeTag('message','g',46,['code':("institute.mission.label"),'default':("Mission")],-1)
+printHtmlPart(21)
+invokeTag('fieldValue','g',48,['bean':(instituteInstance),'field':("mission")],-1)
 printHtmlPart(16)
 }
 printHtmlPart(17)
-if(true && (instituteInstance?.vmCreatedDate)) {
+if(true && (instituteInstance?.name)) {
+printHtmlPart(22)
+invokeTag('message','g',55,['code':("institute.name.label"),'default':("Name")],-1)
+printHtmlPart(23)
+invokeTag('fieldValue','g',57,['bean':(instituteInstance),'field':("name")],-1)
+printHtmlPart(16)
+}
+printHtmlPart(17)
+if(true && (instituteInstance?.vision)) {
+printHtmlPart(24)
+invokeTag('message','g',64,['code':("institute.vision.label"),'default':("Vision")],-1)
+printHtmlPart(25)
+invokeTag('fieldValue','g',66,['bean':(instituteInstance),'field':("vision")],-1)
+printHtmlPart(16)
+}
+printHtmlPart(17)
+if(true && (instituteInstance?.vm_created_date)) {
 printHtmlPart(26)
-invokeTag('message','g',73,['code':("institute.vmCreatedDate.label"),'default':("Vm Created Date")],-1)
+invokeTag('message','g',73,['code':("institute.vm_created_date.label"),'default':("Vmcreateddate")],-1)
 printHtmlPart(27)
-invokeTag('formatDate','g',75,['date':(instituteInstance?.vmCreatedDate)],-1)
+invokeTag('formatDate','g',75,['date':(instituteInstance?.vm_created_date)],-1)
 printHtmlPart(16)
 }
 printHtmlPart(28)
@@ -126,7 +126,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1442294238000L
+public static final long LAST_MODIFIED = 1444132696000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

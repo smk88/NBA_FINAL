@@ -57,44 +57,55 @@ expressionOut.print(flash.message)
 printHtmlPart(12)
 }
 printHtmlPart(13)
-if(true && (PEOInstance?.peoStatement)) {
+if(true && (PEOInstance?.peo_code)) {
 printHtmlPart(14)
-invokeTag('message','g',28,['code':("PEO.peoStatement.label"),'default':("Peo Statement")],-1)
+invokeTag('message','g',28,['code':("PEO.peo_code.label"),'default':("Peocode")],-1)
 printHtmlPart(15)
-invokeTag('fieldValue','g',30,['bean':(PEOInstance),'field':("peoStatement")],-1)
+invokeTag('fieldValue','g',30,['bean':(PEOInstance),'field':("peo_code")],-1)
 printHtmlPart(16)
 }
 printHtmlPart(17)
-if(true && (PEOInstance?.peoCode)) {
+if(true && (PEOInstance?.peo_Statement)) {
 printHtmlPart(18)
-invokeTag('message','g',37,['code':("PEO.peoCode.label"),'default':("Peo Code")],-1)
+invokeTag('message','g',37,['code':("PEO.peo_Statement.label"),'default':("Peo Statement")],-1)
 printHtmlPart(19)
-invokeTag('fieldValue','g',39,['bean':(PEOInstance),'field':("peoCode")],-1)
+invokeTag('fieldValue','g',39,['bean':(PEOInstance),'field':("peo_Statement")],-1)
 printHtmlPart(16)
 }
+printHtmlPart(17)
+if(true && (PEOInstance?.program)) {
 printHtmlPart(20)
-createTagBody(2, {->
+invokeTag('message','g',46,['code':("PEO.program.label"),'default':("Program")],-1)
 printHtmlPart(21)
 createTagBody(3, {->
-invokeTag('message','g',47,['code':("default.button.edit.label"),'default':("Edit")],-1)
+expressionOut.print(PEOInstance?.program?.encodeAsHTML())
 })
-invokeTag('link','g',47,['class':("edit"),'action':("edit"),'resource':(PEOInstance)],3)
+invokeTag('link','g',48,['controller':("program"),'action':("show"),'id':(PEOInstance?.program?.id)],3)
+printHtmlPart(16)
+}
 printHtmlPart(22)
-invokeTag('actionSubmit','g',48,['class':("delete"),'action':("delete"),'value':(message(code: 'default.button.delete.label', default: 'Delete')),'onclick':("return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');")],-1)
+createTagBody(2, {->
 printHtmlPart(23)
+createTagBody(3, {->
+invokeTag('message','g',56,['code':("default.button.edit.label"),'default':("Edit")],-1)
 })
-invokeTag('form','g',50,['url':([resource:PEOInstance, action:'delete']),'method':("DELETE")],2)
+invokeTag('link','g',56,['class':("edit"),'action':("edit"),'resource':(PEOInstance)],3)
 printHtmlPart(24)
-})
-invokeTag('captureBody','sitemesh',52,[:],1)
+invokeTag('actionSubmit','g',57,['class':("delete"),'action':("delete"),'value':(message(code: 'default.button.delete.label', default: 'Delete')),'onclick':("return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');")],-1)
 printHtmlPart(25)
+})
+invokeTag('form','g',59,['url':([resource:PEOInstance, action:'delete']),'method':("DELETE")],2)
+printHtmlPart(26)
+})
+invokeTag('captureBody','sitemesh',61,[:],1)
+printHtmlPart(27)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1442294238000L
+public static final long LAST_MODIFIED = 1443185564000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

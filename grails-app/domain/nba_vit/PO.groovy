@@ -10,7 +10,7 @@ class PO {
     boolean is_current
   
     String toString(){
-        po_statement
+        po_code
     }
     static constraints = {
        po_code nullable : true

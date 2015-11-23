@@ -52,39 +52,43 @@ expressionOut.print(flash.message)
 printHtmlPart(11)
 }
 printHtmlPart(12)
-invokeTag('sortableColumn','g',27,['property':("gaStatement"),'title':(message(code: 'GA.gaStatement.label', default: 'Ga Statement'))],-1)
+invokeTag('sortableColumn','g',27,['property':("ga_code"),'title':(message(code: 'GA.ga_code.label', default: 'Gacode'))],-1)
 printHtmlPart(13)
-invokeTag('sortableColumn','g',29,['property':("gaCode"),'title':(message(code: 'GA.gaCode.label', default: 'Ga Code'))],-1)
+invokeTag('sortableColumn','g',29,['property':("ga_statement"),'title':(message(code: 'GA.ga_statement.label', default: 'Gastatement'))],-1)
 printHtmlPart(14)
+invokeTag('message','g',31,['code':("GA.program.label"),'default':("Program")],-1)
+printHtmlPart(15)
 loop:{
 int i = 0
 for( GAInstance in (GAInstanceList) ) {
-printHtmlPart(15)
-expressionOut.print((i % 2) == 0 ? 'even' : 'odd')
 printHtmlPart(16)
-createTagBody(3, {->
-expressionOut.print(fieldValue(bean: GAInstance, field: "gaStatement"))
-})
-invokeTag('link','g',37,['action':("show"),'id':(GAInstance.id)],3)
+expressionOut.print((i % 2) == 0 ? 'even' : 'odd')
 printHtmlPart(17)
-expressionOut.print(fieldValue(bean: GAInstance, field: "gaCode"))
+createTagBody(3, {->
+expressionOut.print(fieldValue(bean: GAInstance, field: "ga_code"))
+})
+invokeTag('link','g',39,['action':("show"),'id':(GAInstance.id)],3)
 printHtmlPart(18)
+expressionOut.print(fieldValue(bean: GAInstance, field: "ga_statement"))
+printHtmlPart(18)
+expressionOut.print(fieldValue(bean: GAInstance, field: "program"))
+printHtmlPart(19)
 i++
 }
 }
-printHtmlPart(19)
-invokeTag('paginate','g',46,['total':(GAInstanceCount ?: 0)],-1)
 printHtmlPart(20)
-})
-invokeTag('captureBody','sitemesh',49,[:],1)
+invokeTag('paginate','g',50,['total':(GAInstanceCount ?: 0)],-1)
 printHtmlPart(21)
+})
+invokeTag('captureBody','sitemesh',53,[:],1)
+printHtmlPart(22)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1442294238000L
+public static final long LAST_MODIFIED = 1443185534000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'

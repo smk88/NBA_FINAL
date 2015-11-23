@@ -5,7 +5,7 @@ package nba_vit
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
+@Transactional(readOnly = false)
 class LoginController {
     def SendMailService   
     def loginService
@@ -13,9 +13,9 @@ class LoginController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        println("now in index")
-        params.max = Math.min(max ?: 10, 100)
-        respond Login.list(params), model:[loginInstanceCount: Login.count()]
+        println("now in index of login controller")
+        //params.max = Math.min(max ?: 10, 100)
+       // respond Login.list(params), model:[loginInstanceCount: Login.count()]
         // redirect(action:authenticate)
         //redirect(action:LogForm)
     }
@@ -116,10 +116,12 @@ class LoginController {
         {
 //            println("user not found")
             render(view:"/login/login")
+            
         }
         else
         {
             println("user found")
+            session.isValid = true
 //            println("User = "+session.user)
 //            println("Usertype = "+session.usertype)
 //            println("User role = "+session.role)
@@ -196,5 +198,93 @@ class LoginController {
         }
     }
 
+    def logout()
+    {
+        println("logging out of session")
+        session.invalidate()
+//        session.isValid = false
+        redirect(controller:"Login" ,action : "login")
+//        redirect(view : "NBA_VIT/login")
+    }
     
+    def login()
+    {
+        println("now in login controller login funct")
+    }
+    def checkSession()
+    {
+        println("Checking session")
+        println(session)
+        if(session.isValid != null)
+        {
+               println("session is valid")
+               println(session.user)
+        }
+        else
+        {
+//               redirect(controller:"Login", action:"login")
+            println("session is invalid")
+//            redirect(view : "/NBA_VIT")
+        }
+            
+    }
+    
+    def customerQuery()
+    {
+        //render("done")
+    }
+    def complainLogs()
+    {
+       // println("in complain:"+params)
+        println("in complain:"+params.email)
+        CustomerComplain cc = new CustomerComplain()
+        cc.setEid(params.eid.toString())
+        cc.setEname(params.ename.toString())
+        cc.setDept(params.edept.toString())
+        cc.setContact(params.emob.toString())
+        cc.setEmail(params.email.toString())
+        cc.setProbDescription(params.pdesp.toString())
+        cc.setSuggestion(params.sugg.toString())
+       // SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
+       def time = new java.util.Date().getTime()
+       def cy =time + " | " +Calendar.getInstance().get(Calendar.DATE)+ "/" +Calendar.getInstance().get(Calendar.MONTH)+ "/" +  Calendar.getInstance().get(Calendar.YEAR);
+         
+         
+        println("Date:"+cy)
+        cc.setDate(cy.toString())
+        cc.setStatus("In progress")
+        cc.save(flush: true)
+        redirect(controller: "Login", action: "find")
+    }
+    def lastComplainStatus()
+    {
+        
+        def pd =CustomerComplain.findAllByEid(params.eid).probDescription
+      // println("in last:"+lc)
+        def sug =CustomerComplain.findAllByEid(params.eid).suggestion
+      // println("in last:"+lc1)
+        def  sts =CustomerComplain.findAllByEid(params.eid).Status
+      // println("in last:"+lc2)
+       [pd:pd,sug:sug,sts:sts]
+       //println("in last:"+lc.suggestion)
+      // println("in last:"+lc.Status)
+    }
+    def allLogs()
+    {
+        def all = CustomerComplain.findAll()
+        println("All:"+all)
+        [all:all]
+    }
+    def complainLogsEdit()
+    {
+        println("Edit:"+params)
+        def eid = params.eid
+        def status = params.status
+        def date = params.date
+        for(int i=0;i<eid.size();i++){
+        String query = "update CustomerComplain set status='"+status[i]+"' where eid='"+eid[i]+"' and date='"+date[i]+"'"
+        println("Q...."+query)
+        CustomerComplain.executeUpdate(query);
+        }
+    }
 }

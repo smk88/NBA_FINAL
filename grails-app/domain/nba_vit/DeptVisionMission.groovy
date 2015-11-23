@@ -8,5 +8,4 @@ class DeptVisionMission {
     static belongsTo=[department:Department]
     static constraints = {
     }
-    
 }

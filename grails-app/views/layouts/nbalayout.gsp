@@ -1,39 +1,35 @@
+
 <html>
     <head>
+        <meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+       
+        <meta http-equiv="X-UA-Compatible" content='IE-edge'>
+        <meta name="viewport" content="width-device-width, intial-scale-1">
+        
+        <g:javascript library="jquery"/>
     <style type="text/css">
-            #ss1
-            {
-            font-size:0.6em;
-            padding-right: 0%;
-            }
-            #ss2
-            {
-            font-size:0.6em;
-            padding-right: 0%;
-            }
-
             .SettingImage{
-            max-height: 25px;
-            max-width: 25px;
-            height: 25px;
-            width: 25px;
-            }
-            
-            .SettingImage2{
             max-height: 20px;
             max-width: 20px;
             height: 20px;
             width: 20px;
             }
+            
+            .SettingImage2{
+            max-height: 16px;
+            max-width: 16px;
+            height: 16px;
+            width: 16px;
+            }
 
             .SettingText {
-            
             color: white;
-            font-size: 60%;
+            font-size: 55%;
+            text-align: left; 
             }
             
              .SettingText2 {
-            margin: 0 0 10px 10px;
             color: white;
             font-size: 45%;
             text-align: left; 
@@ -41,38 +37,29 @@
 
             .button{
             float: right; 
-            height: 126.3px;
-            width: 150px; 
+            height: 106.3px;
+            width: 140px; 
             }
 
             .button:hover {
-            background-color: #6AA4D4;
-            
-            }
-
-            .button a:hover {
-            text-decoration: none;
+            background-color: #34495E;
             }
 
             .button ul{
             display : none;
-
             }
 
             .button ul li {
-            display: list-item;
-            list-style-type: none; 
+                list-style-type: none; 
+                text-align: left;
+                height:20px; 
+                padding-left: 10px;
+                margin-top: -10px; 
+                padding-bottom: 45px;
             }
-
-            .button:hover ~ #ss2{ padding-right: 0%;}
-            
             
             .button:hover ul{
-            display : block; 
-            }
-            
-             .button ul li:hover{
-            background-color: #71A0C7; 
+                display :  inline-block;
             }
             
             ul#SettingLI li a:hover{
@@ -80,15 +67,27 @@
             }
 
         </style>
+
         <link rel = "stylesheet" type = "text/css" href="${resource(dir: 'css', file: 'bootstrap.min.css')}">
         <link rel = "stylesheet" type = "script/js" href="${resource(dir: 'js', file: 'jquery.min.js')}">
+        <link rel = "stylesheet" type = "script/js" href="${resource(dir: 'js', file: 'jquery-ui.min.js')}">
         <link rel = "stylesheet" type = "script/js" href="${resource(dir: 'js', file: 'bootstrap.min.js')}">
         <link rel = "stylesheet" type = "text/css" href="${resource(dir: 'css', file: 'global.css')}">
+        <link rel = "stylesheet" type = "text/css" href="${resource(dir: 'css', file: 'w3.css')}">
+        <link rel = "stylesheet" type = "text/css" href="${resource(dir: 'css', file: 'font-awesome.min.css')}">
        <g:layoutHead/>
        <r:layoutResources /> 
+       
+    
+       
     </head>
-
+        
     <body>
+        
+        <%
+            response.setHeader("Cache-Control","no-cache, no-store");
+            response.setHeader("Expires","-1");
+        %>
         <div id="header">
             <img id ="vitlogo" src = "${resource(dir: 'images', file: 'vit_logo.png')}" alt="vitlogo" >	
 
@@ -100,8 +99,9 @@
                 </a>
 
                 <ul id = "SettingLI">
-                    <li> <a class = "SettingText2" href = "#"><img class ="SettingImage2" src = "${resource(dir: 'images', file: 'key.png')}">&nbsp;&nbsp;&nbsp;Reset Password</a></li>
-                    <li> <a class = "SettingText2" href = "#"> <img class ="SettingImage2" src = "${resource(dir: 'images', file: 'logout.png')}">&nbsp;&nbsp;&nbsp;Logout</a></li></ul>
+                    <li><a class = "SettingText2" href = "/NBA_VIT/employeeHome/changepassword"><img class ="SettingImage2" src = "${resource(dir: 'images', file: 'key.png')}">&nbsp;&nbsp;&nbsp;Reset Password</a></li>
+                    <li><g:link class = "SettingText2" controller="Login" action="logout"> <img class ="SettingImage2" src = "${resource(dir: 'images', file: 'logout.png')}">&nbsp;&nbsp;&nbsp;Logout</g:link></li>
+                </ul>
             </div>					
             <p> Vishwakarma Institute Of Technology, Pune </br><small id ="header1">NBA Software</small></p>
         </div>
@@ -110,9 +110,9 @@
         
 </div>-->  
 
-        <!--<div id = "container">
-            <div class = "sidebar">
-                <ul id = "sideBarList"> 
+            <!--<div id = "container">
+                <div class = "sidebar">
+                    <ul id = "sideBarList"> 
 
                    
                 </ul>
@@ -138,7 +138,7 @@
         </div> 
         
     </body>
-
+    
 </html>
 
 

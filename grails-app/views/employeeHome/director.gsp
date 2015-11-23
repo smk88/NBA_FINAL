@@ -1,6 +1,7 @@
 <html>
-     <meta name="layout" content="nbalayout"/>
+    
 <head>
+     <meta name="layout" content="nbalayout"/>
     </head>
 		<body>	
 			<div id = "container">

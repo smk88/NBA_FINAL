@@ -52,39 +52,43 @@ expressionOut.print(flash.message)
 printHtmlPart(11)
 }
 printHtmlPart(12)
-invokeTag('sortableColumn','g',27,['property':("peoStatement"),'title':(message(code: 'PEO.peoStatement.label', default: 'Peo Statement'))],-1)
+invokeTag('sortableColumn','g',27,['property':("peo_code"),'title':(message(code: 'PEO.peo_code.label', default: 'Peocode'))],-1)
 printHtmlPart(13)
-invokeTag('sortableColumn','g',29,['property':("peoCode"),'title':(message(code: 'PEO.peoCode.label', default: 'Peo Code'))],-1)
+invokeTag('sortableColumn','g',29,['property':("peo_Statement"),'title':(message(code: 'PEO.peo_Statement.label', default: 'Peo Statement'))],-1)
 printHtmlPart(14)
+invokeTag('message','g',31,['code':("PEO.program.label"),'default':("Program")],-1)
+printHtmlPart(15)
 loop:{
 int i = 0
 for( PEOInstance in (PEOInstanceList) ) {
-printHtmlPart(15)
-expressionOut.print((i % 2) == 0 ? 'even' : 'odd')
 printHtmlPart(16)
-createTagBody(3, {->
-expressionOut.print(fieldValue(bean: PEOInstance, field: "peoStatement"))
-})
-invokeTag('link','g',37,['action':("show"),'id':(PEOInstance.id)],3)
+expressionOut.print((i % 2) == 0 ? 'even' : 'odd')
 printHtmlPart(17)
-expressionOut.print(fieldValue(bean: PEOInstance, field: "peoCode"))
+createTagBody(3, {->
+expressionOut.print(fieldValue(bean: PEOInstance, field: "peo_code"))
+})
+invokeTag('link','g',39,['action':("show"),'id':(PEOInstance.id)],3)
 printHtmlPart(18)
+expressionOut.print(fieldValue(bean: PEOInstance, field: "peo_Statement"))
+printHtmlPart(18)
+expressionOut.print(fieldValue(bean: PEOInstance, field: "program"))
+printHtmlPart(19)
 i++
 }
 }
-printHtmlPart(19)
-invokeTag('paginate','g',46,['total':(PEOInstanceCount ?: 0)],-1)
 printHtmlPart(20)
-})
-invokeTag('captureBody','sitemesh',49,[:],1)
+invokeTag('paginate','g',50,['total':(PEOInstanceCount ?: 0)],-1)
 printHtmlPart(21)
+})
+invokeTag('captureBody','sitemesh',53,[:],1)
+printHtmlPart(22)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1442294238000L
+public static final long LAST_MODIFIED = 1443185562000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'none'
